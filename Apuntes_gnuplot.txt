@@ -1,0 +1,35 @@
+#Para representar con vectores:
+plot "campo_vector.dat" u 1:2:3:4 with vectors
+
+con
+--------------------------
+campo_vector.dat
+#x1	y1	x2	y2
+---------------------------
+
+la orden une el punto (x1,y1) con el punto (x1+x2,y1+y2) con un vector.
+----------------------------------------------------------------------------------
+#Introducir single point en una gráfica
+-->plot f(x), '-' w p pt 7 ps 5 notitle
+#se abrirá una linea de comandos, en las que tenemos que introducir los puntos , cerramos esta linea de comandos con "e"
+-->1,2    #dibuja punto en (1,2)
+-->3,3
+-->e	#cierra línea de comando, representa punto en (1,2) y en (3,3)
+---------------------------------------------------------------------------------------------------------------
+
+#introducir texto en gráfica
+-->set label 3 "texto" at 1,2      #coloca etiqueta 3 que pone "texto" en el punto (1,2)
+
+#pausar programa
+-->pause -1  "Hit return to continue"
+
+#guardar variables en un fichero (ej: parametros de un fit)
+-->set print "fliename"  # guarda todo lo que escribas con print en fichero <filename> sobrescribiendo
+-->set print "filename" append # idem sin sobreescribir
+-->print something  # guarda <something> en <filename> (si no usamos set print, muestra <something> por pantalla>
+
+#guardar error de un fit en una variable:
+If activated by using "set fit errorvariables", the error for each fitted parameter will be stored in a variable named like the parameter, but with "_err" appended.
+
+#Letras griegas
+{/Symbol r} #escribe rho, !!!OJO!!! la sintaxis requiere que la "S" sea mayúscula. con "s" minúscula usa otro tipo de tipografía
