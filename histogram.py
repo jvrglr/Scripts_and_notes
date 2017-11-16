@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 my_file= open("first_passage_D=10.0.dat","r")
 histo= open("histogram_D=10.0.dat","w")
 
-#Save data from file in numpy array
+#Saved data from file in numpy array
 data=np.loadtxt(my_file,dtype=float)
 bins=15
 frc, bin_edges = np.histogram(data,bins=bins)
