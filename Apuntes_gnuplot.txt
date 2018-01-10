@@ -9,13 +9,13 @@ campo_vector.dat
 
 la orden une el punto (x1,y1) con el punto (x1+x2,y1+y2) con un vector.
 ----------------------------------------------------------------------------------
+
 #Introducir single point en una gráfica
--->plot f(x), '-' w p pt 7 ps 5 notitle
-#se abrirá una linea de comandos, en las que tenemos que introducir los puntos , cerramos esta linea de comandos con "e"
--->1,2    #dibuja punto en (1,2)
--->3,3
--->e	#cierra línea de comando, representa punto en (1,2) y en (3,3)
----------------------------------------------------------------------------------------------------------------
+-->plot f(x), 'puntos.dat' w p pt 7 ps 5 notitle
+--------------------------
+puntos.dat
+x	y #dibuja punto en (x,y)
+---------------------------
 
 #introducir texto en gráfica
 -->set label 3 "texto" at 1,2      #coloca etiqueta 3 que pone "texto" en el punto (1,2)
@@ -33,3 +33,18 @@ If activated by using "set fit errorvariables", the error for each fitted parame
 
 #Letras griegas
 {/Symbol r} #escribe rho, !!!OJO!!! la sintaxis requiere que la "S" sea mayúscula. con "s" minúscula usa otro tipo de tipografía
+
+#simbolo de grados
+º={/Symbol \260}
+
+#defino función 1-1/x entre puntos x1=1 y x2=x
+f(x) = (x > 1 && x < 2) ? 1-1/x : 1/0
+
+#Format of label
+set format y "%.1e" # one decimal + exponential notation
+
+#dibujar linea Plot line// plot arrow
+set arrow from 0.5,-0.5 to 0.5,0.9 nohead lc rgb 'red'
+
+#Add tic in axis
+set xtics add ("name" 2.28)--> añade "name" sin comillas en posicion x=2.28 y=0
