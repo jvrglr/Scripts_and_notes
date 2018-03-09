@@ -1,43 +1,43 @@
-#Para representar con vectores:
+#Use vectors
 plot "campo_vector.dat" u 1:2:3:4 with vectors
 
-con
+with
 --------------------------
 campo_vector.dat
 #x1	y1	x2	y2
 ---------------------------
 
-la orden une el punto (x1,y1) con el punto (x1+x2,y1+y2) con un vector.
+arrow goes from (x1,y1) to (x1+x2,y1+y2) 
 ----------------------------------------------------------------------------------
 
-#Introducir single point en una gráfica
+#Include single point on graph
 -->plot f(x), 'puntos.dat' w p pt 7 ps 5 notitle
 --------------------------
 puntos.dat
 x	y #dibuja punto en (x,y)
 ---------------------------
 
-#introducir texto en gráfica
+#include text in graph
 -->set label 3 "texto" at 1,2      #coloca etiqueta 3 que pone "texto" en el punto (1,2)
 
-#pausar programa
+#pause program
 -->pause -1  "Hit return to continue"
 
-#guardar variables en un fichero (ej: parametros de un fit)
+#save variables on file (ej: parametros de un fit)
 -->set print "fliename"  # guarda todo lo que escribas con print en fichero <filename> sobrescribiendo
 -->set print "filename" append # idem sin sobreescribir
 -->print something  # guarda <something> en <filename> (si no usamos set print, muestra <something> por pantalla>
 
-#guardar error de un fit en una variable:
+#save fit error on variable:
 If activated by using "set fit errorvariables", the error for each fitted parameter will be stored in a variable named like the parameter, but with "_err" appended.
 
-#Letras griegas
-{/Symbol r} #escribe rho, !!!OJO!!! la sintaxis requiere que la "S" sea mayúscula. con "s" minúscula usa otro tipo de tipografía
+#Greek letter
+{/Symbol r} #writes rho
 
-#simbolo de grados
+#degree symbol
 º={/Symbol \260}
 
-#defino función 1-1/x entre puntos x1=1 y x2=x
+#define function 1-1/x between x1=1 y x2=x
 f(x) = (x > 1 && x < 2) ? 1-1/x : 1/0
 
 #Format of label
@@ -61,4 +61,12 @@ set output "image.00".t.".png" #name of the 30 .png figures
 plot "picture.".t.".dat" u 1:2:3:4 w vectors head filled lt 2 notitle,"picture.".t.".dat" u 1:2 w points pt 7 notitle
 }
 
+#operation over column
+plot "something.dat" u 1:($2/10.0 -->divide all elements of column 2 by 10.0
 
+#Heat map
+set view map
+splot 'coarse.dat' u 1:2:3 with image notitle
+
+#increase number of samples, used to plot sqrt(x) properly (for example)
+set samples 501 
