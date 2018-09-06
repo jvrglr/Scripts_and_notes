@@ -70,3 +70,6 @@ splot 'coarse.dat' u 1:2:3 with image notitle
 
 #increase number of samples, used to plot sqrt(x) properly (for example)
 set samples 501 
+
+#dashed lines
+plot "something" w lines dashtype 2 notitle
