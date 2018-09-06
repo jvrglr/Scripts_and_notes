@@ -71,5 +71,5 @@ splot 'coarse.dat' u 1:2:3 with image notitle
 #increase number of samples, used to plot sqrt(x) properly (for example)
 set samples 501 
 
-#dashed lines
+#dashed lines (genuplot version > 5.0)
 plot "something" w lines dashtype 2 notitle
