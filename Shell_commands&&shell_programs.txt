@@ -1,2 +1,6 @@
 ##Merge pdf files
 pdftk Portada.pdf TFM_cristobal_structure.pdf cat output merge.pdf
+
+##Kill process using PID from top
+kill -9 PID
+or press k and enter PID in top mode
