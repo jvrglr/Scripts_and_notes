@@ -7,3 +7,6 @@ or press k and enter PID in top mode
 
 ## create .txt file from command line
 echo 'Hello, world.' >foo.txt
+
+## Remove folder filled with files
+rm -rf folder
