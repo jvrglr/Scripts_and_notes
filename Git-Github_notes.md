@@ -1,5 +1,6 @@
 ## Working with remote
     https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
+    (https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
     git push origin branch_name #pushes local repository to remote branch_name
     git remote show origin # See remote associated with local repository
     git remote add origin remote repository URL # Set new remote
