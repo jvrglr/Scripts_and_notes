@@ -16,8 +16,7 @@
 ## Information
 * git branch -a **"Hidden" branches**
 
-## Merging
-* **Using VI to add commit message**
+## Merging: **Using VI to add commit message**
     press "i"
     write your merge message
     press "esc"
