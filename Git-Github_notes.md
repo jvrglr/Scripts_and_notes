@@ -12,3 +12,14 @@
 * git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY    **Clone from remote**
 
 * git pull origin Branch_name   **Fetch+merge local from remote**
+
+## Information
+* git branch -a **"Hidden" branches**
+
+## Merging
+* **Using VI to add commit message**
+    press "i"
+    write your merge message
+    press "esc"
+    write ":wq"
+    then press enter
