@@ -62,7 +62,7 @@ plot "picture.".t.".dat" u 1:2:3:4 w vectors head filled lt 2 notitle,"picture."
 }
 
 #operation over column
-plot "something.dat" u 1:($2/10.0 -->divide all elements of column 2 by 10.0
+plot "something.dat" u 1:($2/10.0) -->divide all elements of column 2 by 10.0
 
 #Heat map
 set view map
