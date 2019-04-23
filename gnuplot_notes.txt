@@ -64,9 +64,16 @@ plot "picture.".t.".dat" u 1:2:3:4 w vectors head filled lt 2 notitle,"picture."
 #operation over column
 plot "something.dat" u 1:($2/10.0) -->divide all elements of column 2 by 10.0
 
+#3D  plot
+set view  53,217,1,1 #set angle, scale: Rot_x,Rot_z,x_scale,z_scale
+set hidden3d #opaque surfaces
+
 #Heat map
 set view map
 splot 'coarse.dat' u 1:2:3 with image notitle
 
 #increase number of samples, used to plot sqrt(x) properly (for example)
 set samples 501 
+
+#dashed lines (genuplot version > 5.0)
+plot "something" w lines dashtype 2 notitle

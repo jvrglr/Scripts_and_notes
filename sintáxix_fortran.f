@@ -15,3 +15,5 @@
       ... do normal stuff ...
    END IF
 END DO
+
+!stop-->ends program
