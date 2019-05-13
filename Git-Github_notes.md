@@ -1,4 +1,6 @@
 ## Working with remote
+* git add file_name **or** git stage file_name **they are synonyms. The command prepares the files for commit.**
+
 * https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
     
 * git push origin branch_name   **pushes local repository to remote branch_name**
