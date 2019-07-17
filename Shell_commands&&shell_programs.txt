@@ -10,3 +10,6 @@ echo 'Hello, world.' >foo.txt
 
 ## Remove folder filled with files
 rm -rf folder
+
+## Save compilation errors in file
+gfortran -g  program.f -o exe > log.txt 2>&1
