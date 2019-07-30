@@ -1,3 +1,11 @@
+#Jupyter notebook
+from scipy.optimize import curve_fit
+import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
+import time
+%matplotlib inline
+
 #Use vectors
 plot "campo_vector.dat" u 1:2:3:4 with vectors
 
