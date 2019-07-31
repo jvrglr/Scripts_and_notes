@@ -13,3 +13,7 @@ rm -rf folder
 
 ## Save compilation errors in file
 gfortran -g  program.f -o exe > log.txt 2>&1
+
+## Give exe permisson to file
+chmod +x fichero_1 
+
