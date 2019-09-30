@@ -1,11 +1,3 @@
-#Jupyter notebook
-from scipy.optimize import curve_fit
-import numpy as np
-import networkx as nx
-import matplotlib.pyplot as plt
-import time
-%matplotlib inline
-
 #Use vectors
 plot "campo_vector.dat" u 1:2:3:4 with vectors
 
@@ -67,6 +59,14 @@ set term png size 1600,1200 #don't know if works with a different terminal
 do for [t=1:30]{ #it'll create 30 figures
 set output "image.00".t.".png" #name of the 30 .png figures
 plot "picture.".t.".dat" u 1:2:3:4 w vectors head filled lt 2 notitle,"picture.".t.".dat" u 1:2 w points pt 7 notitle
+}
+
+#Nested loops/ plot for
+x=3 #realizations of loop over a (first loop)
+do for [a=1:x]{
+set output "zimage.".a.".png"
+plot for [j=1:a] "zzpos_".j.".dat" with points pt 7 lt rgb "grey" ps 3 notitle,\
+"zzpos_".a.".dat" with points pt 7 lt rgb "red" ps 3 notitle
 }
 
 #operation over column
