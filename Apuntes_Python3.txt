@@ -1,3 +1,12 @@
+#Jupyter notebook
+from scipy.optimize import curve_fit
+import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
+import time
+%matplotlib inline
+
+
 #BUCLE FOR USUAL
 FORTRAN: for i=1,n ==  for i in range(int(n)): (python3)
 
