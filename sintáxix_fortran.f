@@ -1,6 +1,6 @@
-	program nombre
-	integer a-b
-	real	m-i
+	!! There are reserved units!! Use big numbers (>100) for the units
+	!!https://stackoverflow.com/questions/42348449/fortran-not-writing-to-screen-while-file-is-open
+	
 	open(unit=number,file="file_name",status="unknown")
 	close(number)
 
