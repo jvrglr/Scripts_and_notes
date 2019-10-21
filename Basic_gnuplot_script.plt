@@ -6,7 +6,7 @@ set ylabel "Energie (KeV)"
 #Posición de la leyenda           
 set key lmargin
 #set xrange [530:560]
-#set term postscript eps enhanced color 14
+#set term postscript eps enhanced color 18
 #set output "Calibrado.eps"
 #fit f(x) "datos.dat" u 1:2 via a,b 
 plot "calibrado_energia_Am241.dat" with points pointtype 7 title "Am241"
