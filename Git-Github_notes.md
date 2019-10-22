@@ -18,6 +18,9 @@
 ## Information
 * git branch -a **"Hidden" branches**
 
+## Git
+* git -d Branch_name **Delete branch**
+
 ## Merging: **Using VI to add commit message**
     press "i"
     write your merge message
