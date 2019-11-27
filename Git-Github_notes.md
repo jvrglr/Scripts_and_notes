@@ -1,9 +1,12 @@
+## Working with git
+* git merge Branch_name **Merges the specified branch into the currently active branch**
+
 ## Working with remote
-* git add file_name **or** git stage file_name **they are synonyms. The command prepares the files for commit.**
+* git add file_name **or** git stage file_name **They are synonyms. The command prepares the files for commit.**
 
 * https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
     
-* git push origin branch_name   **pushes local repository to remote branch_name**
+* git push origin branch_name   **Pushes local repository to remote branch_name**
     
 * git remote show origin    **See remote associated with local repository**
 
