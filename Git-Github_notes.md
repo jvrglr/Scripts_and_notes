@@ -1,5 +1,7 @@
-## Working with git
+## Git
 * git merge Branch_name **Merges the specified branch into the currently active branch**
+* git -d Branch_name **Delete branch**
+* git log **History of commits**
 
 ## Working with remote
 * git add file_name **or** git stage file_name **They are synonyms. The command prepares the files for commit.**
@@ -20,9 +22,6 @@
 
 ## Information
 * git branch -a **"Hidden" branches**
-
-## Git
-* git -d Branch_name **Delete branch**
 
 ## Merging: **Using VI to add commit message**
     press "i"
