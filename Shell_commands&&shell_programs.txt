@@ -17,3 +17,7 @@ gfortran -g  program.f -o exe > log.txt 2>&1
 ## Give exe permisson to file
 chmod +x fichero_1 
 
+## Run on background saving terminal outcome in file
+nohup time ./exe_phase > Output_phase.out &
+
+
