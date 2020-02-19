@@ -1,11 +1,12 @@
 #Jupyter notebook
+```
 from scipy.optimize import curve_fit
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 import time
 %matplotlib inline
-
+```
 #zip - unzip (from touples to separate lists and viceversa)
 https://www.geeksforgeeks.org/python-unzip-a-list-of-tuples/
 
