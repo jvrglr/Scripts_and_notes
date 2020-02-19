@@ -19,31 +19,31 @@ FORTRAN: for i=1,n ==  for i in range(int(n)): (python3)
 --> se usan para explicar funciones, primera linea despues de def.  
 
 # OPERADORES LÓGICOS
---> != "diferente que"
---> >= "menor o igual"
---> == "igual que"
---> in --> x in lista, si x es un elemento de lista devuelve true
+--> != "diferente que"  
+--> >= "menor o igual"  
+--> == "igual que"  
+--> in --> x in lista, si x es un elemento de lista devuelve true  
 
-#LISTAS
--->crear lista con range()
-	--> numeros=list(range(4))
-	--> numeros es una lista con cuatro elementos, numeros=[0,1,2,3]
-	--> numeros=list(range(2,4)) ..> numeros=[2,3]
--->listas dentro de listas
-	--> lista= [1,[5,6]]
-	--> lista[1][1] "=" 6
-	#.POP()
-	-->elimina el ultimo elemento de una lista, se puede guardar,ex:
-		-->x=[1,2,3]
-		-->ultimo = list.pop()--> x "=" [1,2], ultimo "=" 3
-		--> .pop(i) elimina el i-ésimo elemento de la lista
---> crear lista de tuplas con zip: sea x=[x1,x2,x3,...], y=[y1,y2,y3,...]--> list(zip(x1,x2))= [(x1,y1),(x2,y2),(x3,y3),...] 
+# LISTAS
+-->crear lista con range()  
+	--> numeros=list(range(4))  
+	--> numeros es una lista con cuatro elementos, numeros=[0,1,2,3]  
+	--> numeros=list(range(2,4)) ..> numeros=[2,3]  
+-->listas dentro de listas  
+	--> lista= [1,[5,6]]  
+	--> lista[1][1] "=" 6  
+	#.POP()  
+	-->elimina el ultimo elemento de una lista, se puede guardar,ex:  
+		-->x=[1,2,3]  
+		-->ultimo = list.pop()--> x "=" [1,2], ultimo "=" 3  
+		--> .pop(i) elimina el i-ésimo elemento de la lista  
+--> crear lista de tuplas con zip: sea x=[x1,x2,x3,...], y=[y1,y2,y3,...]--> list(zip(x1,x2))= [(x1,y1),(x2,y2),(x3,y3),...]   
 https://www.programiz.com/python-programming/methods/built-in/zip
 
-#NUMEROS DESDE TECLADO
+# NUMEROS DESDE TECLADO
 --> declaro el tipo de variable junto con el comando input, ej; int(input("variable entera:"))
 
-#FICHEROS
+# FICHEROS
 --->abrir fichero: file_variable= open("file_name","mode")
 where mode can be: w-->write
                    r-->read
@@ -55,7 +55,7 @@ where mode can be: w-->write
 -->leer de fichero de datos y pasar a np array: np.loadtxt(file_variable,dtype=float)
 -->cerrar fichero: close mehod .--> file_variable.close()
 
-#FUNCIONES
+# FUNCIONES
 ---> lista como parámetro de función, con operador * (REVISAR)
 ej: list=[thing1,thing2,...]---> def some_function (*list):
 -->defino función de un único parámetro (que espera ser una cadena), si llamo a la función sin parámetro, param1 = "deafault"
@@ -68,7 +68,7 @@ ej: list=[thing1,thing2,...]---> def some_function (*list):
 my_func(hello)-->"hello"
 my_func()-->default
 
-#MODULO numpy
+# MODULO numpy
 ---> Array: Es parecido a una lista, pero las operaciones definidas sobre arrays son como las operaciones
 sobre vectores Reales.
 Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
@@ -90,7 +90,7 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 --> v(sentencia_logica) "=" vector con todos los elementos de v que hacen True la sentencia_logica
 --> UNIVERSAL ARRAY FUNCTIONS https://docs.scipy.org/doc/numpy/reference/ufuncs.html
 
-#STRINGS
+# STRINGS
 --> puedo pensar en un string como en una lista: x="Hola"--> x[0]=H
 	#.split()
 	--> genera lista a partir de string, las palabras separadas por espacios del string son los elementos de la lista.
@@ -107,18 +107,18 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 	>name = 'Sam'
 	print('My number is: {one}, and my name is: {two}'.format(one=num,two=name))--->My number is: 12, and my name is: Sam
 
-#DICCIONARIOS
+# DICCIONARIOS
 --> Es una hash table.
 -->d = {"key1":"value1",key2:123}---> d["key1"] "=" string "value1", d["key2"] "=" number 123
 --> los valores pueden ser otros diccionarios
 
-#BOOLEANOS
+# BOOLEANOS
 --> "True" and "False" !WITH CAPITALS T AND F!
 
-#TUPLA
+# TUPLA
 --> parecido a lista, su sintaxis es con () en vez de [], sus elementos son inmutables, no puedo hacer tupla(0) = "nuevo_valor"
 
-#SET
+# SET
 --> sintaxis parecida a diccionario, set={1,2,3,4}, pero sin key:value.
 --> funcionan parecido a una lista, pero con elementos unicos, sus elementos no se repiten
 	-->ejemplo: s = {1,1,2,3,3} // print (s) "=" {1,2,3}
@@ -126,7 +126,7 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 	--> s={[1,1,2,3,3]} // print (s) "=" {1,2,3}
 --> añado elementos al set con el método .add, que funciona igual que el método .append
 
-#LIST COMPREHENSION
+# LIST COMPREHENSION
 --> forma abreviada de crear una lista, en vez de con el método .append
 	sea x= [1,2,3,4], queremos crar una nueva lista "out", tal que out[i]=x[i]**2 con i en range(1:5)
 		CON LIST COMPREHENSION
@@ -136,7 +136,7 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 		-->for num in x:
 			-->out.append(num)
 
-#MAP
+# MAP
 -->" it maps a function to every element of an iterable"
 -->map(funcion,iterable)-->ejecuta la funcion sobre todos los elementos del iterable. si queremos que el resultado sea una lista,
 hemos de usar list(map(...,...)).
@@ -144,16 +144,16 @@ hemos de usar list(map(...,...)).
 	-->x=[1,2]
 	-->list(map(lambda var: var*3,x)) "=" [3,6]
 
-#FILTER
+# FILTER
 -->muy parecida a la funcion map, filter(func,iterable), la funcion ha de devolver un booleano. list(filter(func,iterable)) 
 tiene como elementos a los elementos de iterable tales que han generado un valor "True" en func.
 
-#IMPORT FUNCTION FROM A MODULE
+# IMPORT FUNCTION FROM A MODULE
 two different (and equivalent) methods:
 --> from module import function // function(variables)
 --> import module // module.function(variables)
 
-#PANDAS DATAFRAME
+# PANDAS DATAFRAME
 --> Sea DATA un DataFrame
 --> DATA.to_csv('data.dat', header=True, index=False, sep='\t', mode='a') --> vuelca data frame en fichero "data.dat"
 	-->mode ="a" --> append mode
@@ -166,7 +166,7 @@ two different (and equivalent) methods:
 	step (s) --> execute current line
 	continue (c) -->  Continue execution till next breakpoint
 
-#MATPLOTLIB
+# MATPLOTLIB
 -->plt.show() at the end of all your plotting commands to have the figure pop up in another window.
 -->FUNCTIONAL METHOD:
 	plt.plot(x,y) (x and y are numpy arrays)
