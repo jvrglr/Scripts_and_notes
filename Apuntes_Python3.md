@@ -1,4 +1,4 @@
-#Jupyter notebook
+# Jupyter notebook
 ```
 from scipy.optimize import curve_fit
 import numpy as np
@@ -7,17 +7,18 @@ import matplotlib.pyplot as plt
 import time
 %matplotlib inline
 ```
-#zip - unzip (from touples to separate lists and viceversa)
+# zip - unzip (from touples to separate lists and viceversa)
+
 https://www.geeksforgeeks.org/python-unzip-a-list-of-tuples/
 
-#BUCLE FOR USUAL
+# BUCLE FOR USUAL
 FORTRAN: for i=1,n ==  for i in range(int(n)): (python3)
 
-#COMENTARIOS DOCSTRINGS
---> se abren y cierran con tres comillas """
---> se usan para explicar funciones, primera linea despues de def.
+# COMENTARIOS DOCSTRINGS
+--> se abren y cierran con tres comillas """  
+--> se usan para explicar funciones, primera linea despues de def.  
 
-#OPERADORES LÓGICOS
+# OPERADORES LÓGICOS
 --> != "diferente que"
 --> >= "menor o igual"
 --> == "igual que"
