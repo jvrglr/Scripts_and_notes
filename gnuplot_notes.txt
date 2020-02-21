@@ -85,3 +85,7 @@ set samples 501
 
 #dashed lines (genuplot version > 5.0)
 plot "something" w lines dashtype 2 notitle
+
+# Set key...
+set key spacing 2 # vertical space between items of legend
+http://gnuplot.sourceforge.net/docs_4.2/node192.html
