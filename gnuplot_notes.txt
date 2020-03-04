@@ -1,3 +1,12 @@
+#multiplot 
+set multiplot { layout <rows>,<cols>
+                     {rowsfirst|columnsfirst} {downwards|upwards}
+                     {title <page title>}
+                     {scale <xscale>{,<yscale>}} {offset <xoff>{,<yoff>}}
+                   }
+     unset multiplot
+http://gnuplot.sourceforge.net/docs_4.2/node203.html
+
 # basic gnuplot script
 
 set xlabel "Canal"
