@@ -1,3 +1,9 @@
+# Rename file from terminal
+
+```
+mv oldname.format newname.format
+```
+
 # Merge pdf files
 ```
 pdftk Portada.pdf TFM_cristobal_structure.pdf cat output merge.pdf
