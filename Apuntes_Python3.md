@@ -44,16 +44,16 @@ https://www.programiz.com/python-programming/methods/built-in/zip
 --> declaro el tipo de variable junto con el comando input, ej; int(input("variable entera:"))
 
 # FICHEROS
---->abrir fichero: file_variable= open("file_name","mode")
-where mode can be: w-->write
-                   r-->read
-                   wb--> write in binary mode
--->escribir en fichero: file_variable.write( "text"+data)
--->cerrar fichero: file_variable.close()
--->escribir variables en columnas file_variable.write(str(variable_1)+" "+str(variable_2)+"\n")
--->escribir variables en columnas file_variable.write("%i %i\n" % (x[i],y[i]))
--->leer de fichero de datos y pasar a np array: np.loadtxt(file_variable,dtype=float)
--->cerrar fichero: close mehod .--> file_variable.close()
+--->abrir fichero: file_variable= open("file_name","mode")  
+where mode can be: w-->write  
+                   r-->read  
+                   wb--> write in binary mode  
+-->escribir en fichero: file_variable.write( "text"+data)  
+-->cerrar fichero: file_variable.close()  
+-->escribir variables en columnas file_variable.write(str(variable_1)+" "+str(variable_2)+"\n")  
+-->escribir variables en columnas file_variable.write("%i %i\n" % (x[i],y[i]))  
+-->leer de fichero de datos y pasar a np array: np.loadtxt(file_variable,dtype=float)  
+-->cerrar fichero: close mehod .--> file_variable.close()  
 
 # FUNCIONES
 ---> lista como parámetro de función, con operador * (REVISAR)
