@@ -1,4 +1,4 @@
-#multiplot 
+# multiplot 
 set multiplot { layout <rows>,<cols>
                      {rowsfirst|columnsfirst} {downwards|upwards}
                      {title <page title>}
@@ -65,28 +65,28 @@ If activated by using "set fit errorvariables", the error for each fitted parame
 #define function 1-1/x between x1=1 y x2=x
 f(x) = (x > 1 && x < 2) ? 1-1/x : 1/0
 
-#Format of label
-set format y "%.1e" # one decimal + exponential notation
+# Format of label
+set format y "%.1e" # one decimal + exponential notation  
 
-#dibujar linea Plot line// plot arrow
-set arrow from 0.5,-0.5 to 0.5,0.9 nohead lc rgb 'red'
+# dibujar linea Plot line// plot arrow
+set arrow from 0.5,-0.5 to 0.5,0.9 nohead lc rgb 'red'  
 
-#Add tic in axis
-set xtics add ("name" 2.28)--> añade "name" sin comillas en posicion x=2.28 y=0
+# Add tic in axis
+set xtics add ("name" 2.28)--> añade "name" sin comillas en posicion x=2.28 y=0  
 
-#Modify xtics
-set xtics ("name" xposition,"name2" xpos2,...)--> it is different from xtics add, since there only will appear 
-the points that we add by hand (instead of adding)
+# Modify xtics
+set xtics ("name" xposition,"name2" xpos2,...)--> it is different from xtics add, since there only will appear   
+the points that we add by hand (instead of adding)  
 
-#do loop 
--->DATA NAME HAS TO BE PROPERLY FORMATTED
-set term png size 1600,1200 #don't know if works with a different terminal
-do for [t=1:30]{ #it'll create 30 figures
-set output "image.00".t.".png" #name of the 30 .png figures
-plot "picture.".t.".dat" u 1:2:3:4 w vectors head filled lt 2 notitle,"picture.".t.".dat" u 1:2 w points pt 7 notitle
+# do loop 
+-->DATA NAME HAS TO BE PROPERLY FORMATTED  
+set term png size 1600,1200 #don't know if works with a different terminal  
+do for [t=1:30]{ #it'll create 30 figures  
+set output "image.00".t.".png" #name of the 30 .png figures  
+plot "picture.".t.".dat" u 1:2:3:4 w vectors head filled lt 2 notitle,"picture.".t.".dat" u 1:2 w points pt 7 notitle  
 }
 
-#Nested loops/ plot for
+# Nested loops/ plot for
 x=3 #realizations of loop over a (first loop)
 do for [a=1:x]{
 set output "zimage.".a.".png"
@@ -94,21 +94,21 @@ plot for [j=1:a] "zzpos_".j.".dat" with points pt 7 lt rgb "grey" ps 3 notitle,\
 "zzpos_".a.".dat" with points pt 7 lt rgb "red" ps 3 notitle
 }
 
-#operation over column
+# operation over column
 plot "something.dat" u 1:($2/10.0) -->divide all elements of column 2 by 10.0
 
-#3D  plot
+# 3D  plot
 set view  53,217,1,1 #set angle, scale: Rot_x,Rot_z,x_scale,z_scale
 set hidden3d #opaque surfaces
 
-#Heat map
+# Heat map
 set view map
 splot 'coarse.dat' u 1:2:3 with image notitle
 
-#increase number of samples, used to plot sqrt(x) properly (for example)
+# increase number of samples, used to plot sqrt(x) properly (for example)
 set samples 501 
 
-#dashed lines (genuplot version > 5.0)
+# dashed lines (genuplot version > 5.0)
 plot "something" w lines dashtype 2 notitle
 
 # Set key...
