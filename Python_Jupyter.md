@@ -50,7 +50,8 @@ where mode can be: w-->write
                    wb--> write in binary mode  
 -->escribir en fichero: file_variable.write( "text"+data)  
 -->cerrar fichero: file_variable.close()  
--->escribir variables en columnas file_variable.write(str(variable_1)+" "+str(variable_2)+"\n")  
+-->escribir variables en columnas file_variable.write(str(variable_1)+" "+str(variable_2)+"\n") 
+--> Better way https://stackoverflow.com/questions/9565426/saving-numpy-array-to-txt-file-row-wise
 -->escribir variables en columnas file_variable.write("%i %i\n" % (x[i],y[i]))  
 -->leer de fichero de datos y pasar a np array: np.loadtxt(file_variable,dtype=float)  
 -->cerrar fichero: close mehod .--> file_variable.close()  
