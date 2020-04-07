@@ -9,7 +9,8 @@ import pandas as pd
 %matplotlib inline
 ```
 # Try/except
-Execute {Try module}, if there is no error. if There is error in Try module, then Execute {Except module}
+Execute {Try module}, if there is no error. if There is error in Try module, then Execute {Except module}.
+"The classical Python mentality, though, is that it's easier to ask forgiveness than permission."
 ```
 try:
     print(data["Total"][i])
