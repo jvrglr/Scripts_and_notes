@@ -8,6 +8,16 @@ import time
 import pandas as pd
 %matplotlib inline
 ```
+# Try/except
+Execute {Try module}, if there is no error. if There is error in Try module, then Execute {Except module}
+```
+try:
+    print(data["Total"][i])
+except KeyError:
+    print("Key error doesn't exist")
+except:
+    print("Something else went wrong") 
+```
 # zip - unzip (from touples to separate lists and viceversa)
 
 https://www.geeksforgeeks.org/python-unzip-a-list-of-tuples/
