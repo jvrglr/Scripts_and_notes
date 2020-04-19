@@ -1,6 +1,6 @@
 ## Git
 * git merge Branch_name **Merges the specified branch into the currently active branch**
-* git -d Branch_name **Delete branch**
+* git branch -d Branch_name **Delete branch**
 * git log **History of commits**
 
 ## Working with remote
