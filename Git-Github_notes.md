@@ -2,6 +2,7 @@
 * git merge Branch_name **Merges the specified branch into the currently active branch**
 * git branch -d Branch_name **Delete branch**
 * git log **History of commits**
+* git reset --hard HEAD~1 **Undo last commit**
 
 ## Working with remote
 * git add file_name **or** git stage file_name **They are synonyms. The command prepares the files for commit.**
