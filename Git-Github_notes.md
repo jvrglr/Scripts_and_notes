@@ -25,6 +25,7 @@
 * git branch -a **"Hidden" branches**
 
 ## Merging: **Using VI to add commit message**
+https://stackoverflow.com/questions/19085807/please-enter-a-commit-message-to-explain-why-this-merge-is-necessary-especially
     press "i"
     write your merge message
     press "esc"
