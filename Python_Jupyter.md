@@ -167,10 +167,14 @@ two different (and equivalent) methods:
 --> import module // module.function(variables)
 
 # PANDAS DATAFRAME
---> Sea DATA un DataFrame
---> DATA.to_csv('data.dat', header=True, index=False, sep='\t', mode='a') --> vuelca data frame en fichero "data.dat"
-	-->mode ="a" --> append mode
-	-->mode = "w" --> write mode (overwrite)
+--> Sea DATA un DataFrame  
+--> DATA.to_csv('data.dat', header=True, index=False, sep='\t', mode='a') --> vuelca data frame en fichero "data.dat"  
+	-->mode ="a" --> append mode  
+	-->mode = "w" --> write mode (overwrite)  
+```
+for col in data.columns: 
+    print(col) 
+```
 # PDB DEBUGGER // DEPURADO // DEPURATE
 -->import pdb
 --> python3 -m pdb myscript.py --> invoke pdb from shell to debugg "myscript.py"
