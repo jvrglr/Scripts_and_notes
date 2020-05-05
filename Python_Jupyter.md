@@ -171,6 +171,7 @@ two different (and equivalent) methods:
 --> DATA.to_csv('data.dat', header=True, index=False, sep='\t', mode='a') --> vuelca data frame en fichero "data.dat"  
 	-->mode ="a" --> append mode  
 	-->mode = "w" --> write mode (overwrite)  
+## Print names of columns
 ```
 for col in data.columns: 
     print(col) 
