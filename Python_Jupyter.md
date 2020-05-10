@@ -185,6 +185,10 @@ for col in data.columns:
 	continue (c) -->  Continue execution till next breakpoint
 
 # MATPLOTLIB
+Add xtics with name:
+```
+plt.xticks([1,8,28,46,41,52], ["1","B","M","V","S","52"])  
+```
 -->plt.show() at the end of all your plotting commands to have the figure pop up in another window.
 -->FUNCTIONAL METHOD:
 	plt.plot(x,y) (x and y are numpy arrays)
