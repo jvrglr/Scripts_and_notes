@@ -1,4 +1,4 @@
-# Jupyter notebook
+### Jupyter notebook
 ```
 from scipy.optimize import curve_fit
 import numpy as np
@@ -8,7 +8,7 @@ import time
 import pandas as pd
 %matplotlib inline
 ```
-# Try/except
+### Try/except
 Execute {Try module}, if there is no error. if There is error in Try module, then Execute {Except module}.
 "The classical Python mentality, though, is that it's easier to ask forgiveness than permission."
 ```
@@ -19,43 +19,32 @@ except KeyError:
 except:
     print("Something else went wrong") 
 ```
-# zip - unzip (from touples to separate lists and viceversa)
+### zip - unzip (from touples to separate lists and viceversa)
 
 https://www.geeksforgeeks.org/python-unzip-a-list-of-tuples/
 
-# BUCLE FOR USUAL
-FORTRAN: for i=1,n ==  for i in range(int(n)): (python3)
-
-# COMENTARIOS DOCSTRINGS
---> se abren y cierran con tres comillas """  
---> se usan para explicar funciones, primera linea despues de def.  
-
-# OPERADORES LÓGICOS
+### OPERADORES LÓGICOS
+```
 --> != "diferente que"  
 --> >= "menor o igual"  
 --> == "igual que"  
 --> in --> x in lista, si x es un elemento de lista devuelve true  
+```
 
-# LISTAS
--->crear lista con range()  
-	--> numeros=list(range(4))  
-	--> numeros es una lista con cuatro elementos, numeros=[0,1,2,3]  
-	--> numeros=list(range(2,4)) ..> numeros=[2,3]  
--->listas dentro de listas  
-	--> lista= [1,[5,6]]  
-	--> lista[1][1] "=" 6  
-	#.POP()  
-	-->elimina el ultimo elemento de una lista, se puede guardar,ex:  
-		-->x=[1,2,3]  
-		-->ultimo = list.pop()--> x "=" [1,2], ultimo "=" 3  
-		--> .pop(i) elimina el i-ésimo elemento de la lista  
+### LISTAS
+``` 
 --> crear lista de tuplas con zip: sea x=[x1,x2,x3,...], y=[y1,y2,y3,...]--> list(zip(x1,x2))= [(x1,y1),(x2,y2),(x3,y3),...]   
 https://www.programiz.com/python-programming/methods/built-in/zip
+```
 
-# NUMEROS DESDE TECLADO
+### NUMEROS DESDE TECLADO
+```
+ANCIENT CODING
 --> declaro el tipo de variable junto con el comando input, ej; int(input("variable entera:"))
+```
 
-# FICHEROS
+### FICHEROS
+```
 --->abrir fichero: file_variable= open("file_name","mode")  
 where mode can be: w-->write  
                    r-->read  
@@ -66,9 +55,14 @@ where mode can be: w-->write
 --> Better way https://stackoverflow.com/questions/9565426/saving-numpy-array-to-txt-file-row-wise
 -->escribir variables en columnas file_variable.write("%i %i\n" % (x[i],y[i]))  
 -->leer de fichero de datos y pasar a np array: np.loadtxt(file_variable,dtype=float)  
--->cerrar fichero: close mehod .--> file_variable.close()  
+-->cerrar fichero: close mehod .--> file_variable.close() 
+```
 
 # FUNCIONES
+```
+Comentarios:
+--> se abren y cierran con tres comillas """  
+
 ---> lista como parámetro de función, con operador * (REVISAR)
 ej: list=[thing1,thing2,...]---> def some_function (*list):
 -->defino función de un único parámetro (que espera ser una cadena), si llamo a la función sin parámetro, param1 = "deafault"
@@ -80,7 +74,7 @@ ej: list=[thing1,thing2,...]---> def some_function (*list):
     
 my_func(hello)-->"hello"
 my_func()-->default
-
+```
 # MODULO numpy
 ---> Array: Es parecido a una lista, pero las operaciones definidas sobre arrays son como las operaciones
 sobre vectores Reales.
