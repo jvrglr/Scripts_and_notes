@@ -176,6 +176,7 @@ DATA.to_csv('data.dat', header=True, index=False, sep='\t', mode='a') --> vuelca
 Read data:
 ```
 data= pd.read_csv("covid19-provincias-spain_consolidated.csv")
+data= pd.read_csv("Trajectories/t1.dat",delimiter=" ",skipinitialspace=True) #Read data from Fortran format (*,*)
 ```
 Print columns:
 ```
