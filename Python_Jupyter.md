@@ -167,11 +167,17 @@ two different (and equivalent) methods:
 --> import module // module.function(variables)
 
 # PANDAS DATAFRAME
---> Sea DATA un DataFrame  
---> DATA.to_csv('data.dat', header=True, index=False, sep='\t', mode='a') --> vuelca data frame en fichero "data.dat"  
-	-->mode ="a" --> append mode  
-	-->mode = "w" --> write mode (overwrite)  
-### Print names of columns
+Write data:
+```
+DATA.to_csv('data.dat', header=True, index=False, sep='\t', mode='a') --> vuelca data frame en fichero "data.dat"  
+#mode ="a" --> append mode  
+#mode = "w" --> write mode (overwrite) 
+```
+Read data:
+```
+data= pd.read_csv("covid19-provincias-spain_consolidated.csv")
+```
+Print columns:
 ```
 for col in data.columns: 
     print(col) 
