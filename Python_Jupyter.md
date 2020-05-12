@@ -58,7 +58,7 @@ where mode can be: w-->write
 -->cerrar fichero: close mehod .--> file_variable.close() 
 ```
 
-# FUNCIONES
+### FUNCIONES
 ```
 Comentarios:
 --> se abren y cierran con tres comillas """  
@@ -75,7 +75,7 @@ ej: list=[thing1,thing2,...]---> def some_function (*list):
 my_func(hello)-->"hello"
 my_func()-->default
 ```
-# MODULO numpy
+### MODULO numpy
 ---> Array: Es parecido a una lista, pero las operaciones definidas sobre arrays son como las operaciones
 sobre vectores Reales.
 Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
@@ -97,7 +97,7 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 --> v(sentencia_logica) "=" vector con todos los elementos de v que hacen True la sentencia_logica
 --> UNIVERSAL ARRAY FUNCTIONS https://docs.scipy.org/doc/numpy/reference/ufuncs.html
 
-# STRINGS
+### STRINGS
 --> puedo pensar en un string como en una lista: x="Hola"--> x[0]=H
 	#.split()
 	--> genera lista a partir de string, las palabras separadas por espacios del string son los elementos de la lista.
@@ -114,18 +114,18 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 	>name = 'Sam'
 	print('My number is: {one}, and my name is: {two}'.format(one=num,two=name))--->My number is: 12, and my name is: Sam
 
-# DICCIONARIOS
+### DICCIONARIOS
 --> Es una hash table.
 -->d = {"key1":"value1",key2:123}---> d["key1"] "=" string "value1", d["key2"] "=" number 123
 --> los valores pueden ser otros diccionarios
 
-# BOOLEANOS
+### BOOLEANOS
 --> "True" and "False" !WITH CAPITALS T AND F!
 
-# TUPLA
+### TUPLA
 --> parecido a lista, su sintaxis es con () en vez de [], sus elementos son inmutables, no puedo hacer tupla(0) = "nuevo_valor"
 
-# SET
+### SET
 --> sintaxis parecida a diccionario, set={1,2,3,4}, pero sin key:value.
 --> funcionan parecido a una lista, pero con elementos unicos, sus elementos no se repiten
 	-->ejemplo: s = {1,1,2,3,3} // print (s) "=" {1,2,3}
@@ -133,7 +133,7 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 	--> s={[1,1,2,3,3]} // print (s) "=" {1,2,3}
 --> añado elementos al set con el método .add, que funciona igual que el método .append
 
-# LIST COMPREHENSION
+### LIST COMPREHENSION
 --> forma abreviada de crear una lista, en vez de con el método .append
 	sea x= [1,2,3,4], queremos crar una nueva lista "out", tal que out[i]=x[i]**2 con i en range(1:5)
 		CON LIST COMPREHENSION
@@ -143,7 +143,7 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 		-->for num in x:
 			-->out.append(num)
 
-# MAP
+### MAP
 -->" it maps a function to every element of an iterable"
 -->map(funcion,iterable)-->ejecuta la funcion sobre todos los elementos del iterable. si queremos que el resultado sea una lista,
 hemos de usar list(map(...,...)).
@@ -151,16 +151,22 @@ hemos de usar list(map(...,...)).
 	-->x=[1,2]
 	-->list(map(lambda var: var*3,x)) "=" [3,6]
 
-# FILTER
+### FILTER
 -->muy parecida a la funcion map, filter(func,iterable), la funcion ha de devolver un booleano. list(filter(func,iterable)) 
 tiene como elementos a los elementos de iterable tales que han generado un valor "True" en func.
 
-# IMPORT FUNCTION FROM A MODULE
+### IMPORT FUNCTION FROM A MODULE  
+
 two different (and equivalent) methods:
 --> from module import function // function(variables)
 --> import module // module.function(variables)
 
-# PANDAS DATAFRAME
+### PANDAS DATAFRAME  
+
+Filter out new data frame from previous one:
+```
+data1= data[data["ine_code"]==i]
+```
 Write data:
 ```
 DATA.to_csv('data.dat', header=True, index=False, sep='\t', mode='a') --> vuelca data frame en fichero "data.dat"  
