@@ -76,6 +76,7 @@ my_func(hello)-->"hello"
 my_func()-->default
 ```
 ### MODULO numpy
+```
 ---> Array: Es parecido a una lista, pero las operaciones definidas sobre arrays son como las operaciones
 sobre vectores Reales.
 Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
@@ -96,8 +97,9 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 --> bool = v >5 "=" bool es un vector de booleanos, un elemento es True si dicho elemento en v es mayor que cinco. v[bool] "=" vector con todos los elementos > 5 de v.
 --> v(sentencia_logica) "=" vector con todos los elementos de v que hacen True la sentencia_logica
 --> UNIVERSAL ARRAY FUNCTIONS https://docs.scipy.org/doc/numpy/reference/ufuncs.html
-
+```
 ### STRINGS
+```
 --> puedo pensar en un string como en una lista: x="Hola"--> x[0]=H
 	#.split()
 	--> genera lista a partir de string, las palabras separadas por espacios del string son los elementos de la lista.
@@ -113,7 +115,7 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 	>num = 12
 	>name = 'Sam'
 	print('My number is: {one}, and my name is: {two}'.format(one=num,two=name))--->My number is: 12, and my name is: Sam
-
+```
 ### DICCIONARIOS
 --> Es una hash table.
 -->d = {"key1":"value1",key2:123}---> d["key1"] "=" string "value1", d["key2"] "=" number 123
@@ -162,7 +164,10 @@ two different (and equivalent) methods:
 --> import module // module.function(variables)
 
 ### PANDAS DATAFRAME  
-
+Print row:
+```
+print(df.iloc[[index]])
+```
 Filter out new data frame from previous one:
 ```
 data1= data[data["ine_code"]==i]
