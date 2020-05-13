@@ -59,6 +59,10 @@ nohup time ./exe_phase > Output_phase.out &
 ## Scp example: copy from local to remote
 
 ```
-scp /home/javi/Desktop/file_name  javieraguilar@ifisc.uib-csic.es:/home/javieraguilar/Desktop
+scp /home/javi/Desktop/file_name  javieraguilar@ifisc.uib-csic.es:/home/javieraguilar/Desktop 
 
+```
+## Scp example: from remote to local, copy all
+```
+scp -r javieraguilar@ifisc.uib-csic.es:/data/social/mobility_map_2020/networks_model /home/javi/Desktop/Corona/Cities/data
 ```
