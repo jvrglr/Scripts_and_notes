@@ -168,6 +168,11 @@ two different (and equivalent) methods:
 --> import module // module.function(variables)
 
 ### PANDAS DATAFRAME  
+Append column:
+```
+day=[today(data["date"][i]) for i in range(len(data))]
+data["day"]=day
+```
 Print row:
 ```
 print(df.iloc[[index]])
