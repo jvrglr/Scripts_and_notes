@@ -117,10 +117,14 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 	print('My number is: {one}, and my name is: {two}'.format(one=num,two=name))--->My number is: 12, and my name is: Sam
 ```
 ### DICCIONARIOS
---> Es una hash table.
--->d = {"key1":"value1",key2:123}---> d["key1"] "=" string "value1", d["key2"] "=" number 123
---> los valores pueden ser otros diccionarios
-
+```
+# Es una hash table.
+d = {"key1":"value1",key2:123} #---> d["key1"] "=" string "value1", d["key2"] "=" number 123
+```
+Save dictionary on file using pandas:
+```
+pd.read_csv("networks_model/2019-10-27_2019-11-02_Washington-Arlington-Alexandria,_DC-VA-MD-WV.csv",delimiter=";",skipinitialspace=True)
+```
 ### BOOLEANOS
 --> "True" and "False" !WITH CAPITALS T AND F!
 
