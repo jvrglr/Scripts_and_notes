@@ -1,3 +1,8 @@
+## Create n new folders
+Example: n=52. Folders are named Trajectories1, Trajectories2,...,Trajectories52
+```
+mkdir Trajectories{1..52}
+```
 ## Add line at first line of file
 ```
 for i in {1..2}; do sed -i -e '1iHello, world\' a${i}.cvs;done
