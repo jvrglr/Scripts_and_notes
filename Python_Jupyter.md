@@ -48,6 +48,7 @@ ANCIENT CODING
 --->abrir fichero: file_variable= open("file_name","mode")  
 where mode can be: w-->write  
                    r-->read  
+		   a-->append
                    wb--> write in binary mode  
 -->escribir en fichero: file_variable.write( "text"+data)  
 -->cerrar fichero: file_variable.close()  
