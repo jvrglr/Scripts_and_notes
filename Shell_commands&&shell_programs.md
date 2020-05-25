@@ -5,7 +5,7 @@ mkdir Trajectories{1..52}
 ```
 ## Add line at first line of file
 ```
-for i in {1..2}; do sed -i -e '1iHello, world\' a${i}.cvs;done
+for i in {1..2}; do sed -i -e '1iHello, world\' a${i}.csv;done
 ```
 ## Rename file from terminal
 
