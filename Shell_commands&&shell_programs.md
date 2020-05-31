@@ -7,6 +7,11 @@ mkdir Trajectories{1..52}
 ```
 for i in {1..2}; do sed -i -e '1iHello, world\' a${i}.csv;done
 ```
+## replace line at Nth line of file
+https://stackoverflow.com/questions/11145270/how-to-replace-an-entire-line-in-a-text-file-by-line-number
+```
+sed -i 'Ns/.*/New line  /' file.dat
+```
 ## Rename file from terminal
 
 ```
