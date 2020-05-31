@@ -207,6 +207,11 @@ for col in data.columns:
 	continue (c) -->  Continue execution till next breakpoint
 
 # MATPLOTLIB
+Add text to scatter plot:
+```
+city=["name1","name2",...,"namen"]
+for i, txt in enumerate(city):
+    plt.annotate(txt, (x[i], y[i]))
 Add xtics with name:
 ```
 plt.xticks([1,8,28,46,41,52], ["1","B","M","V","S","52"])  
