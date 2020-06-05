@@ -1,3 +1,9 @@
+# VIM commands
+search and replace: Find each occurrence of 'foo' (in all lines), and replace it with 'bar'. 
+https://vim.fandom.com/wiki/Search_and_replace
+```
+:%s/foo/bar/g
+```
 ## Create n new folders
 Example: n=52. Folders are named Trajectories1, Trajectories2,...,Trajectories52
 ```
