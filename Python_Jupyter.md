@@ -8,6 +8,15 @@ import time
 import pandas as pd
 %matplotlib inline
 ```
+### Measure time
+```
+import time
+
+start = time.time()
+print("hello")
+end = time.time()
+print(end - start)
+```
 ### Try/except
 Execute {Try module}, if there is no error. if There is error in Try module, then Execute {Except module}.
 "The classical Python mentality, though, is that it's easier to ask forgiveness than permission."
@@ -198,14 +207,15 @@ Print columns:
 for col in data.columns: 
     print(col) 
 ```
-# PDB DEBUGGER // DEPURADO // DEPURATE
+### PDB DEBUGGER // DEPURADO // DEPURATE
+```
 -->import pdb
 --> python3 -m pdb myscript.py --> invoke pdb from shell to debugg "myscript.py"
 --> import pdb; pdb.set_trace() "="  to break into the debugger from a running program
 --> Commands:
 	step (s) --> execute current line
 	continue (c) -->  Continue execution till next breakpoint
-
+```
 # MATPLOTLIB
 Add text to scatter plot:
 ```
