@@ -222,12 +222,15 @@ Add text to scatter plot:
 city=["name1","name2",...,"namen"]
 for i, txt in enumerate(city):
     plt.annotate(txt, (x[i], y[i]))
+```
 Add xtics with name:
 ```
 plt.xticks([1,8,28,46,41,52], ["1","B","M","V","S","52"])  
 ```
--->plt.show() at the end of all your plotting commands to have the figure pop up in another window.
--->FUNCTIONAL METHOD:
+LATEX options-->https://matplotlib.org/3.3.1/tutorials/text/usetex.html  
+
+FUNCTIONAL METHOD:
+```
 	plt.plot(x,y) (x and y are numpy arrays)
 	plt.xlabel('X Axis Title Here')
 	plt.ylabel('Y Axis Title Here')
@@ -239,7 +242,9 @@ plt.xticks([1,8,28,46,41,52], ["1","B","M","V","S","52"])
 	plt.plot(x, y, 'r--') # More on color options later
 	plt.subplot(1,2,2)
 	plt.plot(y, x, 'g*-');
--->OBJECT ORIENTED METHOD
+```
+-OBJECT ORIENTED METHOD
+```
 	# Creates blank canvas
 	fig = plt.figure()
 
@@ -257,7 +262,9 @@ plt.xticks([1,8,28,46,41,52], ["1","B","M","V","S","52"])
 	axes2.set_xlabel('X_label_axes2')
 	axes2.set_ylabel('Y_label_axes2')
 	axes2.set_title('Axes 2 Title');
---> Saving on a file:
+```
+ Saving on a file:
+ ```
 	Matplotlib can generate high-quality output in a number formats, including PNG, JPG, EPS, SVG, PGF and PDF
 	-->To save a figure to a file we can use the savefig method in the Figure class: fig.savefig("filename.png")
 	-->Here we can also optionally specify the DPI and choose between different output formats: fig.savefig("filename.png", dpi=200)
@@ -281,7 +288,7 @@ plt.plot(x,y,"r--")
 -->fig.tight_layout()--> separa graficas para que no se superpongan
 --> EXAMPLES
 	fig, axes = plt.subplots(1, 2, figsize=(10,4)) --> 10x4 inches
-
+```
 
 
 
