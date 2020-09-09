@@ -5,6 +5,7 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 import time
+import random as r
 import pandas as pd
 %matplotlib inline
 ```
