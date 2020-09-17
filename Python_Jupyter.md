@@ -8,7 +8,20 @@ import time
 import random as r
 import pandas as pd
 %matplotlib inline
+
+
 ```
+
+### Data from 'keyboard'
+```
+#How to run program: python program.py $value
+
+#In  program.py...
+import sys
+
+y = float(sys.argv[1]) # y==$value
+```
+
 ### Measure time
 ```
 import time
