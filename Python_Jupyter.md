@@ -11,7 +11,10 @@ import pandas as pd
 
 
 ```
-
+### Networx
+```
+nx.write_gpickle(G, "LFR_Benchmark_2.gpickle") #Save_network
+```
 ### Data from 'keyboard'
 ```
 #How to run program: python program.py $value
