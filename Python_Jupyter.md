@@ -12,8 +12,20 @@ import pandas as pd
 
 ```
 ### Networx
+Save network
 ```
 nx.write_gpickle(G, "LFR_Benchmark_2.gpickle") #Save_network
+```
+Create/Save/load positions of nodes in canvas
+```
+#Create (G is a networkx network)
+pos = nx.spring_layout(G,k=0.25)
+#Save
+pd.DataFrame.from_dict(data=pos, orient='index').to_csv('movie/dic_with_positions.csv', header=False)
+#Load
+pos=pd.read_csv('movie/dic_with_positions.csv',header=None)
+pos_dic={a:np.array([pos[1].iloc[a],pos[2].iloc[a]]) for a in range(len(pos))}
+pos=pos_dic
 ```
 ### Data from 'keyboard'
 ```
