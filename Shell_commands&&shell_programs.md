@@ -1,3 +1,13 @@
+## Videos with FFmpeg  
+
+Documentation: https://www.ffmpeg.org/ffmpeg-formats.html#Demuxers  
+
+Formatting index and example:
+%03d indicate:index with 3 digits padded by zeros--> 001,002,...,010,...,125,...
+```
+ffmpeg -r 14 -i Images_sin_pelos/%03d.picture.png -c:v libx264 -r 30 -pix_fmt yuv420p -vf scale=1600:800 out_sin.mp4
+
+```
 ## delete by type
 ```
 find . -type f -name '*.dat' -delete
