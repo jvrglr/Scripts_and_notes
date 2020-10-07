@@ -1,13 +1,16 @@
 ### Jupyter notebook
 ```
+%matplotlib notebook
 from scipy.optimize import curve_fit
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 import time
-import random as r
 import pandas as pd
-%matplotlib inline
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
+from matplotlib import cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
+#%matplotlib inline
 
 
 ```
