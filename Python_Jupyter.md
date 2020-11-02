@@ -85,6 +85,10 @@ ANCIENT CODING
 ```
 
 ### FICHEROS
+Save numpy array as columns
+```
+np.savetxt("filename.dat",np.c_[v1,v2]) #save two numpy arrays (v1,v2) as columns in file
+```
 ```
 --->abrir fichero: file_variable= open("file_name","mode")  
 where mode can be: w-->write  
