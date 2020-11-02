@@ -1,6 +1,7 @@
 ### Jupyter notebook
 ```
 %matplotlib notebook
+import sys
 from scipy.optimize import curve_fit
 import numpy as np
 import networkx as nx
