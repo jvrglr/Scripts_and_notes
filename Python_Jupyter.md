@@ -170,7 +170,7 @@ d = {"key1":"value1",key2:123} #---> d["key1"] "=" string "value1", d["key2"] "=
 ```
 Save dictionary on file using pandas:
 ```
-pd.DataFrame.from_dict(data=dicprov, orient='index').to_csv('dict_name_to_label_provincias.csv', header=False)
+pd.DataFrame.from_dict(data=dicname, orient='index').to_csv('file_name.csv', header=False)
 ```
 ### BOOLEANOS
 --> "True" and "False" !WITH CAPITALS T AND F!
