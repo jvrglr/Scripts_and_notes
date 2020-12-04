@@ -1,3 +1,25 @@
+## Check if there is not file
+```
+if [[ ! -f "filename" ]] # ! is logical not. -f "filename" = true if filename is in folder
+		then
+		    do things
+		fi #End of if statement
+```
+## Arithmetic operations on float variables. bc
+Output is integer
+```
+var1=`echo "($var2*10000)/1" | bc` #The operations have into account float nature of var2
+
+```
+Output is float
+```
+var1=`echo "($var2*10000)/1" | bc -l` 
+```
+
+Output is float with two decimals
+```
+var1=`echo "scale=2;($var2*10000)/1" | bc -l` 
+```
 ## #!/bin/bash  
 
 Rubén:"Cuando lo ejecutas en la terminal, por defecto estás usando bash para interpretar tu script. pero al lanzarlo con run, no hay ningun interprete por defecto, así que el sistema busca algún tipo de indicación en tu script sobre que interprete debe utilizar...  
