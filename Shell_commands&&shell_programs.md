@@ -1,3 +1,11 @@
+## #!/bin/bash  
+
+Rubén:"Cuando lo ejecutas en la terminal, por defecto estás usando bash para interpretar tu script. pero al lanzarlo con run, no hay ningun interprete por defecto, así que el sistema busca algún tipo de indicación en tu script sobre que interprete debe utilizar...  
+
+Para eso sirve la primera línea que siempre hay que poner en un script bash:  
+
+#!/bin/bash  "
+
 ## Videos with FFmpeg  
 
 Documentation: https://www.ffmpeg.org/ffmpeg-formats.html#Demuxers  
