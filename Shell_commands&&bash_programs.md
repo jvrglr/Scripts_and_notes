@@ -48,6 +48,10 @@ https://vim.fandom.com/wiki/Search_and_replace
 ```
 :%s/foo/bar/g
 ```
+search: Fin occurrence of "word". Go over every occurence pressing "n" on the keyboard
+```
+/word
+```
 ## Create n new folders
 Example: n=52. Folders are named Trajectories1, Trajectories2,...,Trajectories52
 ```
