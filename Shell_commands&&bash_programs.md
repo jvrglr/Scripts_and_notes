@@ -1,5 +1,5 @@
 # Table of Contents
-1. [Check](#Arithmetic operations on float variables)
+1. [Check](#example)
 
 ## Check if there is not file
 ```
@@ -8,7 +8,7 @@ if [[ ! -f "filename" ]] # ! is logical not. -f "filename" = true if filename is
 		    do things
 		fi #End of if statement
 ```
-## Arithmetic operations on float variables. bc
+## [example]Arithmetic operations on float variables. bc
 Output is integer
 ```
 var1=`echo "($var2*10000)/1" | bc` #The operations have into account float nature of var2
