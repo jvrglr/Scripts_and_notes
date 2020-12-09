@@ -1,5 +1,5 @@
 # Table of Contents
-1. [Check](#Arithmetic)
+1. [Check](#Arithmetic operations on float variables)
 
 ## Check if there is not file
 ```
