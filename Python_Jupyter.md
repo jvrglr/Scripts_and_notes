@@ -31,6 +31,52 @@ pos=pd.read_csv('movie/dic_with_positions.csv',header=None)
 pos_dic={a:np.array([pos[1].iloc[a],pos[2].iloc[a]]) for a in range(len(pos))}
 pos=pos_dic
 ```
+Plot network on map using basemap
+```
+from mpl_toolkits.basemap import Basemap as Basemap
+#Plot filtered network on map:
+#I have to have into account that:
+# 1) The filtered network have holes in the sense that the labels are not consecutive integers
+# 2) As the network IS directed, target nodes might or might not be sources
+graph = nx.from_pandas_edgelist(Fd, source = "label_source", target = "label_target", #Load network from DataFrame
+                                 edge_attr = True,create_using = nx.DiGraph())    #edge_attr=True so the rest of columns of the DataFrame are edge attribures
+graph=nx.convert_node_labels_to_integers(G=graph, first_label=0, ordering='default', label_attribute=None) #relabel with consecutive integers
+plt.figure(figsize = (10,9))
+m= Basemap(projection='merc',llcrnrlon=-76,llcrnrlat=38,urcrnrlon=-70,
+            urcrnrlat=42, lat_ts=0, resolution='h',suppress_ticks=True) #Select bbox and projection on map
+sources=list(set(Fd["source"])) #set of names for sources
+t=[a for a in set(Fd["target"]) if a not in sources] #There are targets that are not source!!-> set of names of targets that are not sources
+nodes=sources+t #total number of nodes
+
+long=[0 for _ in nodes] #List wiht longitudes of nodes
+lat=[0 for _ in nodes] #list with latitudes of nodes
+for edge in graph.edges():
+    sE=edge[0] #label of source
+    tE=edge[1] #label of target
+    long[sE]=graph.edges[edge]["long_source"]
+    lat[sE]=graph.edges[edge]["lat_source"]
+    long[tE]=graph.edges[edge]["long_target"]
+    lat[tE]=graph.edges[edge]["lat_target"]
+
+
+mx,my=m(long,lat)
+pos = {}
+
+for count,elem in enumerate(nodes):
+    pos[count] = (mx[count], my[count]) #get projection
+    
+nx.draw_networkx_nodes(G = graph, pos = pos, nodelist = graph.nodes(),node_color = 'r',
+                       alpha = 0.1, node_size = 100) 
+nx.draw_networkx_edges(G = graph, pos = pos, edge_color='g', alpha=0.3, arrows = False)
+
+m.drawcountries(linewidth = 3)
+m.drawstates(linewidth = 0.2)
+m.drawcoastlines(linewidth=2)
+plt.tight_layout()
+plt.savefig("./NY_with_filter.png", format = "png", dpi = 300)
+plt.show()
+
+```
 ### Data from 'keyboard'
 ```
 #How to run program: python program.py $value
