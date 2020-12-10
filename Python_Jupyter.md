@@ -121,14 +121,8 @@ https://www.geeksforgeeks.org/python-unzip-a-list-of-tuples/
 
 ### LISTAS
 ``` 
---> crear lista de tuplas con zip: sea x=[x1,x2,x3,...], y=[y1,y2,y3,...]--> list(zip(x1,x2))= [(x1,y1),(x2,y2),(x3,y3),...]   
+--> crear lista de tuplas con zip: sea x=[x1,x2,x3,...], y=[y1,y2,y3,...]--> list(zip(x,y))= [(x1,y1),(x2,y2),(x3,y3),...]   
 https://www.programiz.com/python-programming/methods/built-in/zip
-```
-
-### NUMEROS DESDE TECLADO
-```
-ANCIENT CODING
---> declaro el tipo de variable junto con el comando input, ej; int(input("variable entera:"))
 ```
 
 ### FICHEROS
@@ -218,7 +212,7 @@ Save dictionary on file using pandas:
 ```
 pd.DataFrame.from_dict(data=dicname, orient='index').to_csv('file_name.csv', header=False)
 ```
-### BOOLEANOS
+### BOOLEANS
 --> "True" and "False" !WITH CAPITALS T AND F!
 
 ### TUPLA
