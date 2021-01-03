@@ -294,6 +294,16 @@ for col in data.columns:
 	continue (c) -->  Continue execution till next breakpoint
 ```
 # MATPLOTLIB
+Nat. Com. review matplotlib options (By Mattia)
+```
+plt.rcParams.update({'font.size':12})
+plt.figure(figsize=(8,6))
+plt.rcParams['axes.linewidth']=2 #marco doble
+plt.xlabel(r"$X_s$ value",fontsize=30)
+plt.ylabel("Frecuency",fontsize=30)
+plt.legend(fontsize=15)
+plt.savefig("Imax_Nat_review.pdf", bbox_inches='tight')
+```
 Add text to scatter plot:
 ```
 city=["name1","name2",...,"namen"]
