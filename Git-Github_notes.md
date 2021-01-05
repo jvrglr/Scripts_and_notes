@@ -17,7 +17,7 @@
 
 * git remote -v     **Verifies the new remote URL**
 
-* git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY    **Clone from remote**
+* git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY New_Name   **Clone from remote on new folder New_name**
 
 * git pull origin Branch_name   **Fetch+merge local from remote**
 * git checkout filename **WHEN PULLING, Discard local changes for a specific file https://stackoverflow.com/questions/15745045/how-do-i-resolve-git-saying-commit-your-changes-or-stash-them-before-you-can-me/20036755**
