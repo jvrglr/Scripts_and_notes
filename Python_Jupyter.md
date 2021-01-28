@@ -262,6 +262,11 @@ two different (and equivalent) methods:
 --> import module // module.function(variables)
 
 ### PANDAS DATAFRAME  
+Proper way of changing value of dataframe,  getting rid of SettingWithCopyWarning  
+https://stackoverflow.com/questions/20625582/how-to-deal-with-settingwithcopywarning-in-pandas
+```
+dataframe.loc[dataframe[condition]]=new_value(s)
+```
 Append column:
 ```
 day=[today(data["date"][i]) for i in range(len(data))]
