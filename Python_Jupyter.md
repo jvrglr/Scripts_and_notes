@@ -262,6 +262,10 @@ two different (and equivalent) methods:
 --> import module // module.function(variables)
 
 ### PANDAS DATAFRAME  
+Convert column to integer
+```
+dataW["column"] = dataW["column"].astype(int)
+```
 Proper way of changing value of dataframe,  getting rid of SettingWithCopyWarning  
 https://stackoverflow.com/questions/20625582/how-to-deal-with-settingwithcopywarning-in-pandas
 ```
