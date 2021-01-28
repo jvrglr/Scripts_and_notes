@@ -203,10 +203,17 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 	>name = 'Sam'
 	print('My number is: {one}, and my name is: {two}'.format(one=num,two=name))--->My number is: 12, and my name is: Sam
 ```
-### DICCIONARIOS
+### DICTIONARY / DICCIONARIOS
+Definition:
 ```
 # Es una hash table.
 d = {"key1":"value1",key2:123} #---> d["key1"] "=" string "value1", d["key2"] "=" number 123
+```
+Iterate over dictionary (Python3):
+https://stackoverflow.com/questions/5466618/too-many-values-to-unpack-iterating-over-a-dict-key-string-value-list
+```
+for field, possible_values in fields.items():
+    print(field, possible_values)
 ```
 Save dictionary on file using pandas:
 ```
