@@ -262,6 +262,10 @@ two different (and equivalent) methods:
 --> import module // module.function(variables)
 
 ### PANDAS DATAFRAME  
+Intersect two dataframes by column
+```
+df = pd.merge(data1, data2, how ='inner', on =['column']) 
+```
 Convert column to integer
 ```
 dataW["column"] = dataW["column"].astype(int)
@@ -309,7 +313,7 @@ for col in data.columns:
 	step (s) --> execute current line
 	continue (c) -->  Continue execution till next breakpoint
 ```
-# MATPLOTLIB
+### MATPLOTLIB
 Nat. Com. review matplotlib options (By Mattia)
 ```
 plt.rcParams.update({'font.size':12})
