@@ -226,22 +226,22 @@ pd.DataFrame.from_dict(data=dicname, orient='index').to_csv('file_name.csv', hea
 --> parecido a lista, su sintaxis es con () en vez de [], sus elementos son inmutables, no puedo hacer tupla(0) = "nuevo_valor"
 
 ### SET
---> sintaxis parecida a diccionario, set={1,2,3,4}, pero sin key:value.
---> funcionan parecido a una lista, pero con elementos unicos, sus elementos no se repiten
-	-->ejemplo: s = {1,1,2,3,3} // print (s) "=" {1,2,3}
--->lo puedo usar para quedarme con los elementos unicos de una lista:
-	--> s={[1,1,2,3,3]} // print (s) "=" {1,2,3}
---> añado elementos al set con el método .add, que funciona igual que el método .append
+--> sintaxis parecida a diccionario, set={1,2,3,4}, pero sin key:value.  
+--> funcionan parecido a una lista, pero con elementos unicos, sus elementos no se repiten  
+	-->ejemplo: s = {1,1,2,3,3} // print (s) "=" {1,2,3}  
+-->lo puedo usar para quedarme con los elementos unicos de una lista:  
+	--> s={[1,1,2,3,3]} // print (s) "=" {1,2,3}  
+--> añado elementos al set con el método .add, que funciona igual que el método .append  
 
 ### LIST COMPREHENSION
---> forma abreviada de crear una lista, en vez de con el método .append
-	sea x= [1,2,3,4], queremos crar una nueva lista "out", tal que out[i]=x[i]**2 con i en range(1:5)
-		CON LIST COMPREHENSION
-		-->out = [item**2 for item in x]--> out = [1, 4, 9, 16]
-		CON MÉTODO .APPEND
-		-->out= [] #empty list
-		-->for num in x:
-			-->out.append(num)
+--> forma abreviada de crear una lista, en vez de con el método .append  
+	sea x= [1,2,3,4], queremos crar una nueva lista "out", tal que out[i]=x[i]**2 con i en range(1:5)  
+		CON LIST COMPREHENSION  
+		-->out = [item**2 for item in x]--> out = [1, 4, 9, 16]  
+		CON MÉTODO .APPEND  
+		-->out= [] #empty list  
+		-->for num in x:  
+			-->out.append(num)  
 
 ### MAP
 -->" it maps a function to every element of an iterable"
@@ -262,6 +262,11 @@ two different (and equivalent) methods:
 --> import module // module.function(variables)
 
 ### PANDAS DATAFRAME  
+Iterate over rows:  **WARNING!! does not preserv data type** 
+```
+for index, row in data.iterrows():
+    cell=int(row["cell"])
+```
 Intersect two dataframes by column
 ```
 df = pd.merge(data1, data2, how ='inner', on =['column']) 
