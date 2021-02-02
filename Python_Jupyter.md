@@ -273,7 +273,9 @@ df = pd.merge(data1, data2, how ='inner', on =['column'])
 ```
 Convert column to integer
 ```
-dataW["column"] = dataW["column"].astype(int)
+dataW["column"] = dataW["column"].astype(int) #Converts "column" to integer
+data=data.astype({"column1":type1,"column2":type2,...} #Converts diferent columns to different types
+data=data.astype(type) #Converts the whole dataset
 ```
 Proper way of changing value of dataframe,  getting rid of SettingWithCopyWarning  
 https://stackoverflow.com/questions/20625582/how-to-deal-with-settingwithcopywarning-in-pandas
