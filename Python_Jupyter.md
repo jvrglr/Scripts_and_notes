@@ -328,6 +328,8 @@ plt.figure(figsize=(8,6))
 plt.rcParams['axes.linewidth']=2 #marco doble
 plt.xlabel(r"$X_s$ value",fontsize=30)
 plt.ylabel("Frecuency",fontsize=30)
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
 plt.legend(fontsize=15)
 plt.savefig("Imax_Nat_review.pdf", bbox_inches='tight')
 ```
