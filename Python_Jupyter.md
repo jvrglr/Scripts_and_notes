@@ -16,6 +16,10 @@ from matplotlib.ticker import LinearLocator, FormatStrFormatter
 
 ```
 ### Networx
+Note -> a networkx Digraph object is a dictionary whose basic keys are:
+```
+G[source][target]["weight"] #source and target are node labels
+```
 Save network
 ```
 nx.write_gpickle(G, "LFR_Benchmark_2.gpickle") #Save_network
