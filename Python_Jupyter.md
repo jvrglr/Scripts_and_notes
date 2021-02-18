@@ -166,7 +166,13 @@ ej: list=[thing1,thing2,...]---> def some_function (*list):
 my_func(hello)-->"hello"
 my_func()-->default
 ```
-### MODULO numpy
+### Numpy
+Enumerate-like for 2D arrays:
+```
+for (x,y),value in np.ndenumerate(numpy array):
+	...
+```
+Notes:
 ```
 ---> Array: Es parecido a una lista, pero las operaciones definidas sobre arrays son como las operaciones
 sobre vectores Reales.
