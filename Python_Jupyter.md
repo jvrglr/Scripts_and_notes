@@ -336,6 +336,7 @@ Nat. Com. review matplotlib options (By Mattia)
 plt.rcParams.update({'font.size':12})
 plt.figure(figsize=(8,6))
 plt.rcParams['axes.linewidth']=2 #marco doble
+plt.tick_params(labelsize=24)
 plt.xlabel(r"$X_s$ value",fontsize=30)
 plt.ylabel("Frecuency",fontsize=30)
 plt.xticks(fontsize=20)
