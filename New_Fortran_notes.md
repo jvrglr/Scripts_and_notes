@@ -1,3 +1,6 @@
+### References
+Brainerd, W. S. (2009). Guide to Fortran 2003 programming (pp. 1-326). Berlin: Springer.  
+
 ### Forall is restricted 
 
 https://stackoverflow.com/questions/8602596/fortran-forall-restrictions  
