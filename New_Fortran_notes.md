@@ -1,6 +1,40 @@
 ### References
 Brainerd, W. S. (2009). Guide to Fortran 2003 programming (pp. 1-326). Berlin: Springer.  
 
+### Modules
+Example:
+```
+module declarations_module
+
+  implicit none
+  double precision, public :: b,u,dt  #public variables can be used outside module
+  integer*4, public :: N,itmax,I0,tmax
+
+
+contains
+
+  subroutine assingments()
+    u=1.0d0 !recovery rate
+    b=2.0d0*u !infection rate
+    I0=1 !Initial condition
+    N=300 !Number of individuals
+    tmax=10 !final time for simulation
+    dt=1.0/((b+u)*N) !Integration step
+    itmax=int(tmax/dt) !Final iteration
+  end subroutine assingments
+
+end module declarations_module
+```
+Use statement:
+```
+program main
+use declarations_module
+implicit none
+call assingments()
+
+...
+end main
+```
 ### Forall is restricted 
 
 https://stackoverflow.com/questions/8602596/fortran-forall-restrictions  
