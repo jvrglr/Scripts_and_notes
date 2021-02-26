@@ -1,6 +1,17 @@
 ### References
 Brainerd, W. S. (2009). Guide to Fortran 2003 programming (pp. 1-326). Berlin: Springer.  
 
+### Measure time
+Example from: https://gcc.gnu.org/onlinedocs/gfortran/CPU_005fTIME.html
+```
+program test_cpu_time
+    real :: start, finish
+    call cpu_time(start)
+        ! put code to test here
+    call cpu_time(finish)
+    print '("Time = ",f6.3," seconds.")',finish-start
+end program test_cpu_time
+```
 ### Tips
 There are reserved units!! Use big numbers (>100) for the units  
 https://stackoverflow.com/questions/42348449/fortran-not-writing-to-screen-while-file-is-open  
