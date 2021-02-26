@@ -1,6 +1,13 @@
 ### References
 Brainerd, W. S. (2009). Guide to Fortran 2003 programming (pp. 1-326). Berlin: Springer.  
 
+### Tips
+There are reserved units!! Use big numbers (>100) for the units  
+https://stackoverflow.com/questions/42348449/fortran-not-writing-to-screen-while-file-is-open  
+
+### From number to string and vice versa
+https://coderwall.com/p/dqwzea/str2num-and-num2str-functions-in-fortran
+
 ### Optional arguments
 Example:
 ```
