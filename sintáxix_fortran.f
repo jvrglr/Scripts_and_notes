@@ -1,8 +1,4 @@
-	!! There are reserved units!! Use big numbers (>100) for the units
-	!!https://stackoverflow.com/questions/42348449/fortran-not-writing-to-screen-while-file-is-open
-	
-	!!From string to number from numbers to string using read and write
-	!! https://coderwall.com/p/dqwzea/str2num-and-num2str-functions-in-fortran
+
 	
 	
 	!!NUMBERS ON STRINGS+FILE NAMES
