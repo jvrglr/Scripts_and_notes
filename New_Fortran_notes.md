@@ -1,6 +1,22 @@
 ### References
 Brainerd, W. S. (2009). Guide to Fortran 2003 programming (pp. 1-326). Berlin: Springer.  
 
+### Optional arguments
+Example:
+```
+  subroutine example(nonopt,opt)
+    implicit none
+    integer*4, intent (out) :: nonopt
+    character (len=*),optional,intent(in) :: opt ! optional character argument with length=* (already defined in main)
+   
+      if ( present(opt) ) then
+         !Do something if opt was introduced
+       else
+         !Do a different thing if opt was not introduced
+      end if
+  end subroutine example
+```
+
 ### Rename / change alias of functions with pointers
 Example extracted from: https://stackoverflow.com/questions/8612466/how-to-alias-a-function-name-in-fortran/8612679
 ```
