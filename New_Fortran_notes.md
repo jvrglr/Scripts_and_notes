@@ -13,8 +13,10 @@ program test_cpu_time
 end program test_cpu_time
 ```
 ### Tips
-There are reserved units!! Use big numbers (>100) for the units  
+1. There are reserved units!! Use big numbers (>100) for the units  
 https://stackoverflow.com/questions/42348449/fortran-not-writing-to-screen-while-file-is-open  
+
+2. Allocatable memory depends on machine!
 
 ### From number to string and vice versa
 https://coderwall.com/p/dqwzea/str2num-and-num2str-functions-in-fortran
@@ -142,6 +144,16 @@ https://stackoverflow.com/questions/4122099/do-fortran-95-constructs-such-as-whe
 FORALL (i=1:n,j=1:n,i/=j) A(i,j) = REAL(i+j)
 ```
 ### Files read and write
+Read from bash script
+```
+b=2
+echo $b | ./program.x
+....
+program program.x
+...
+read (*,*) b
+end program
+```
 FORM=Unformatted: save memory and is faster to read, **is not portable**. Can be used with stream,sequential and direct access
 ```
 #Write in sequential unformatted
