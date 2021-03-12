@@ -219,6 +219,22 @@ Definition:
 # Es una hash table.
 d = {"key1":"value1",key2:123} #---> d["key1"] "=" string "value1", d["key2"] "=" number 123
 ```
+Append to dictionary:
+https://stackoverflow.com/questions/1024847/how-can-i-add-new-keys-to-a-dictionary
+```
+d = {'key': 'value'}
+print(d)  # {'key': 'value'}
+
+d['mynewkey'] = 'mynewvalue'
+
+print(d)  # {'key': 'value', 'mynewkey': 'mynewvalue'}
+```
+Plot dictionary: https://stackoverflow.com/questions/37266341/plotting-a-python-dict-in-order-of-key-values/37266356
+```
+lists = sorted(d.items()) # sorted by key, return a list of tuples
+
+x, y = zip(*lists) # unpack a list of pairs into two tuples
+```
 Iterate over dictionary (Python3):
 https://stackoverflow.com/questions/5466618/too-many-values-to-unpack-iterating-over-a-dict-key-string-value-list
 ```
@@ -230,18 +246,24 @@ Save dictionary on file using pandas:
 pd.DataFrame.from_dict(data=dicname, orient='index').to_csv('file_name.csv', header=False)
 ```
 ### BOOLEANS
---> "True" and "False" !WITH CAPITALS T AND F!
+"True" and "False" !WITH CAPITALS T AND F!
 
 ### TUPLA
---> parecido a lista, su sintaxis es con () en vez de [], sus elementos son inmutables, no puedo hacer tupla(0) = "nuevo_valor"
+parecido a lista, su sintaxis es con () en vez de []. Sus elementos son inmutables, no puedo hacer tupla(0) = "nuevo_valor"
 
 ### SET
+Definition and syntax:
+```
 --> sintaxis parecida a diccionario, set={1,2,3,4}, pero sin key:value.  
 --> funcionan parecido a una lista, pero con elementos unicos, sus elementos no se repiten  
 	-->ejemplo: s = {1,1,2,3,3} // print (s) "=" {1,2,3}  
 -->lo puedo usar para quedarme con los elementos unicos de una lista:  
 	--> s={[1,1,2,3,3]} // print (s) "=" {1,2,3}  
+```
+Append:
+```
 --> añado elementos al set con el método .add, que funciona igual que el método .append  
+```
 
 ### LIST COMPREHENSION
 --> forma abreviada de crear una lista, en vez de con el método .append  
