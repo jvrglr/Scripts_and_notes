@@ -150,6 +150,13 @@ where mode can be: w-->write
 ```
 
 ### FUNCIONES
+Useful defined functions
+```
+def G(x,mu,sig):
+    PI=np.pi
+    return np.exp(-(x - mu)*(x - mu) / (2.0 *sig*sig))/(np.sqrt(2.0*PI)*sig)
+
+vG=np.vectorize(G)
 ```
 Comentarios:
 --> se abren y cierran con tres comillas """  
@@ -365,6 +372,49 @@ plt.xticks(fontsize=20)
 plt.yticks(fontsize=20)
 plt.legend(fontsize=15)
 plt.savefig("Imax_Nat_review.pdf", bbox_inches='tight')
+```
+Heatmaps 1: from 2D numpy array
+```
+xpoints=101
+ppoints=101
+xs=np.linspace(-10,10,xpoints)
+ps=np.linspace(-10,10,ppoints)
+P=np.zeros((xpoints,ppoints))
+for i,x in enumerate(xs):
+        for j,p in enumerate(ps):
+            P[i][j]=G(x,p*t,s1)*G(p,0,s2)
+plt.imshow(P.T, cmap='viridis')
+pos=plt.xticks()
+lista=list(range(0,101,20))
+plt.xticks(lista,xs[lista].astype(int),fontsize=15)
+plt.yticks(lista,ps[lista].astype(int),fontsize=15)
+plt.title(r"$\rho(x,p,t="+str(t)+")$",fontsize=20)
+plt.xlabel("x",fontsize=30)
+plt.ylabel("p",fontsize=30,rotation=0)
+```
+Rotate ylabel
+```
+h = plt.ylabel('y')
+h.set_rotation(0)
+```
+Heatmap 2: from DataFrame
+```
+data= pd.read_csv("data.dat",delimiter=" ",skipinitialspace=True)
+
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+plt.xlabel("$X_s$")
+plt.ylabel("$P_{th}$")
+X = np.array(data[data["R0"]==R0]["#1-Xs"])
+Y = np.array(data[data["R0"]==R0]["Pth"])
+Z = np.array(data[data["R0"]==R0]["slope"])
+
+surf = ax.plot_trisurf(X, Y, Z, cmap=cm.coolwarm,
+		   linewidth=0, antialiased=False)
+# Add a color bar which maps values to colors.
+fig.colorbar(surf, shrink=0.5, aspect=5)
+
+plt.show()
 ```
 Add text to scatter plot:
 ```
