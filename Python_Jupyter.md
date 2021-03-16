@@ -159,8 +159,11 @@ def G(x,mu,sig):
 vG=np.vectorize(G)
 ```
 Comentarios:
+```
 --> se abren y cierran con tres comillas """  
-
+```
+lists as arguments:
+```
 ---> lista como parámetro de función, con operador * (REVISAR)
 ej: list=[thing1,thing2,...]---> def some_function (*list):
 -->defino función de un único parámetro (que espera ser una cadena), si llamo a la función sin parámetro, param1 = "deafault"
