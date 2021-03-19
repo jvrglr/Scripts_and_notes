@@ -46,6 +46,12 @@ ffmpeg -r 14 -i Images_sin_pelos/%03d.picture.png -c:v libx264 -r 30 -pix_fmt yu
 find . -type f -name '*.dat' -delete
 ```
 ## VIM commands
+copy, paste, cut
+https://vim.fandom.com/wiki/Copy,_cut_and_paste
+```
+y-> copy
+p-> paste
+```
 search and replace: Find each occurrence of 'foo' (in all lines), and replace it with 'bar'.  
 https://vim.fandom.com/wiki/Search_and_replace
 ```
