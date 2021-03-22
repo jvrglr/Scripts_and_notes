@@ -2,6 +2,8 @@ module declarations_module
   !Module for public variables to be used in the rest of the modules
   implicit none
   public
+  
+  integer*4 :: ios
 
 
 contains
