@@ -7,13 +7,6 @@ module functions
   double precision, private :: f
 contains
 
-  function WbSIS(I) result(f)
-    !Example of function
-    implicit none
-    integer*4, intent (in) :: I
-    f=I*(N-I)*b/N
-  end function WbSIS
-
   character(len=30) function str(k) !fUNCTION
     implicit none
 !   "Convert an integer to string."
