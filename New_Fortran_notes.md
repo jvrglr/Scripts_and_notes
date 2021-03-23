@@ -18,7 +18,7 @@ https://stackoverflow.com/questions/42348449/fortran-not-writing-to-screen-while
 
 2. Allocatable memory depends on machine!
 
-3. carefull with type conversion! ```i**n ``` is different from ```dble(i)**n``` !!!!
+3. carefull with type conversion! let i, n be integers,  ```i**n ``` is different from ```dble(i)**n``` !!!!
 
 ### From number to string and vice versa
 https://coderwall.com/p/dqwzea/str2num-and-num2str-functions-in-fortran
