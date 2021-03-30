@@ -23,6 +23,13 @@ set output "name.eps"
 plot "calibrado_energia_Am241.dat" with points pointtype 7 title "Am241"
 #pause -1
 
+#Change font size
+
+set ylabel "x2" font "Helvetica,20"
+set key font "Helvetica,20"
+set tics font "Helvetica,20"
+
+
 # Use vectors
 plot "campo_vector.dat" u 1:2:3:4 with vectors
 
