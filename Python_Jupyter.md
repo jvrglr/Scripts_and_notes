@@ -376,6 +376,20 @@ plt.yticks(fontsize=20)
 plt.legend(fontsize=15)
 plt.savefig("Imax_Nat_review.pdf", bbox_inches='tight')
 ```
+Vector fields with quiver
+https://krajit.github.io/sympy/vectorFields/vectorFields.html
+https://matplotlib.org/stable/gallery/images_contours_and_fields/quiver_demo.html#sphx-glr-gallery-images-contours-and-fields-quiver-demo-py
+```
+x,y = np.meshgrid(np.linspace(0.0,1.5,20),np.linspace(0.0,2.5,20))
+n=4
+S=0.5
+a=1.2
+u = a*x**n/(S**n+x**n)+S**n/(S**n+y**n)-x
+v = a*y**n/(S**n+y**n)+S**n/(S**n+x**n)-y
+M = np.hypot(u, v) #Color
+plt.quiver(x,y,u,v,M,alpha=0.5,width=0.005,
+               scale=1 / 0.05)
+```
 Heatmaps 1: from 2D numpy array
 ```
 xpoints=101
