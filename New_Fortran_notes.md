@@ -1,6 +1,15 @@
 ### References
 Brainerd, W. S. (2009). Guide to Fortran 2003 programming (pp. 1-326). Berlin: Springer.  
 
+### Count
+Counts the number of occurrences of condition on an array.
+https://gcc.gnu.org/onlinedocs/gfortran/COUNT.html  
+  
+Count for non-zero values in array:  
+```
+print *, count(array/=0)
+```
+
 ### Measure time
 Example from: https://gcc.gnu.org/onlinedocs/gfortran/CPU_005fTIME.html
 ```
