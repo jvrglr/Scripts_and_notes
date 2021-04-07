@@ -1,6 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+data = np.random.normal(size=10000)
+plt.hist(data, bins=np.logspace(np.log10(0.1),np.log10(1.0), 50))
+plt.gca().set_xscale("log")
+plt.gca().set_yscale("log")
+plt.show()
+
+
 my_file= open("first_passage_D=10.0.dat","r")
 histo= open("histogram_D=10.0.dat","w")
 
