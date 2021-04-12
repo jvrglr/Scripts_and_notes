@@ -50,11 +50,12 @@ contains
     a=sqrt(dble_var(x)/size(x))
   end function dble_err
   
-    double precision function G(x,mu,sig)
+  function G(x,mu,sig) result(a)
     !Gaussian function
     implicit none
+    double precision :: a
     double precision, intent (in):: x,mu,sig
-    G=(1.0/(sqrt(2.0*pi)*sig))*exp(-(x - mu)*(x - mu) / (2.0d0 *sig*sig))
+    a=(1.0/(sqrt(2.0*pi)*sig))*exp(-(x - mu)*(x - mu) / (2.0d0 *sig*sig))
   end function G
 
 end module functions
