@@ -3,6 +3,9 @@ module functions
   !Depends on declarations_module.
   use declarations_module
   implicit none
+  
+  double precision, public, parameter :: pi = &
+   3.1415926535897932384626433832795028841972
 
   double precision, private :: f
 contains
@@ -46,5 +49,12 @@ contains
     double precision, dimension (:), intent(in) :: x
     a=sqrt(dble_var(x)/size(x))
   end function dble_err
+  
+    double precision function G(x,mu,sig)
+    !Gaussian function
+    implicit none
+    double precision, intent (in):: x,mu,sig
+    G=(1.0/(sqrt(2.0*pi)*sig))*exp(-(x - mu)*(x - mu) / (2.0d0 *sig*sig))
+  end function G
 
 end module functions
