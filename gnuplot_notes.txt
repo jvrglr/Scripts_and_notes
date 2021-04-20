@@ -112,6 +112,9 @@ set hidden3d #opaque surfaces
 set view map
 splot 'coarse.dat' u 1:2:3 with image notitle
 
+#Cool Splot with transparency
+http://www.gnuplotting.org/tag/transparent/
+
 # increase number of samples, used to plot sqrt(x) properly (for example)
 set samples 501 
 
