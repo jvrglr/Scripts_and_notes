@@ -1,6 +1,18 @@
 ### References
 Brainerd, W. S. (2009). Guide to Fortran 2003 programming (pp. 1-326). Berlin: Springer.  
 
+### Array
+Assumed shape: Array declarations in modules, functions,...  
+The user has to make explicit the lowerbound of the arrat if it is different from 1.  
+```
+subroutine test()
+implicit none
+double precision, dimension(lowerbound:), intent(inout) :: array1
+
+
+subroutine test
+```
+
 ### Count
 Counts the number of occurrences of condition on an array.
 https://gcc.gnu.org/onlinedocs/gfortran/COUNT.html  
