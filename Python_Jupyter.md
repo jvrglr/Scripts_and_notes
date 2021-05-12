@@ -162,6 +162,11 @@ def G(x,mu,sig):
     return np.exp(-(x - mu)*(x - mu) / (2.0 *sig*sig))/(np.sqrt(2.0*PI)*sig)
 
 vG=np.vectorize(G)
+
+def Pois(x,l):
+    return x**l*np.exp(-l)/math.factorial(x)
+
+vPois=np.vectorize(Pois)
 ```
 Comentarios:
 ```
