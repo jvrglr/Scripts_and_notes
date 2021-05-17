@@ -167,6 +167,12 @@ def Pois(x,l):
     return x**l*np.exp(-l)/math.factorial(x)
 
 vPois=np.vectorize(Pois)
+
+def lgnorm(x,mu,sig):
+    PI=np.pi
+    return np.exp(-(np.log(x) - mu)*(np.log(x) - mu) / (2.0 *sig*sig))/(np.sqrt(2.0*PI)*sig*x)
+
+vlgnorm=np.vectorize(G)
 ```
 Comentarios:
 ```
