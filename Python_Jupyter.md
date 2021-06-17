@@ -406,6 +406,14 @@ M = np.hypot(u, v) #Color
 plt.quiver(x,y,u,v,M,alpha=0.5,width=0.005,
                scale=1 / 0.05)
 ```
+3D Scatter plot
+```
+from mpl_toolkits.mplot3d import Axes3D
+fig = plt.figure()
+ax = Axes3D(fig)
+ax.scatter(x,y,z,s=markersize)
+plt.show()
+```
 Heatmaps 1: from 2D numpy array
 ```
 xpoints=101
