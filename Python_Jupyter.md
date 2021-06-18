@@ -406,6 +406,22 @@ M = np.hypot(u, v) #Color
 plt.quiver(x,y,u,v,M,alpha=0.5,width=0.005,
                scale=1 / 0.05)
 ```
+2D heatmap from dataframe using Seaborn
+```
+plt.close()
+
+d=pd.read_csv("data/var_h_b.dat",skipinitialspace=True,delimiter=" ",names="R0 h t".split(" "))
+pivotted= d.pivot(index='h',columns='R0',values='t')
+
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
+ax=sns.heatmap(pivotted,cmap='RdBu',cbar_kws={'label': 'colorbar_name'})
+ax.figure.axes[-1].yaxis.label.set_size(30) #size of title for colorbar
+#ax.invert_xaxis() #to invert xaxis (0,1,2)->(2,1,0)
+plt.xlabel("x_title",fontsize=30)
+plt.ylabel("y_title",fontsize=30)
+plt.show()
+```
 3D Scatter plot
 ```
 from mpl_toolkits.mplot3d import Axes3D
