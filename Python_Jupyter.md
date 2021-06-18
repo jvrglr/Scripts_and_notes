@@ -406,6 +406,13 @@ M = np.hypot(u, v) #Color
 plt.quiver(x,y,u,v,M,alpha=0.5,width=0.005,
                scale=1 / 0.05)
 ```
+Add legend item manually
+https://stackoverflow.com/questions/39500265/manually-add-legend-items-python-matplotlib
+```
+import matplotlib.patches as mpatches
+red_patch = mpatches.Patch(color='red', label="red")
+plt.legend(handles=[red_patch])
+```
 2D heatmap from dataframe using Seaborn
 ```
 plt.close()
