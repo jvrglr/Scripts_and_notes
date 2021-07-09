@@ -12,6 +12,7 @@ import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
 from matplotlib import cm
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
+import matplotlib.patches as mpatches
 #%matplotlib inline
 
 
