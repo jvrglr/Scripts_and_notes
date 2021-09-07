@@ -1,6 +1,10 @@
 # Table of Contents
 1. [Check](#example)
 
+## Append labeled list of files
+```
+cat mini_file_{i0..if}.txt >> big_file.txt
+```
 ## Check if there is not file
 ```
 if [[ ! -f "filename" ]] # ! is logical not. -f "filename" = true if filename is in folder
