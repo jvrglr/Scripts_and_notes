@@ -328,6 +328,11 @@ cut_label = cut_bins[1::] #Label of the bins, could be a list of names
 d['x1_bins'] = pd.cut(d['x1'], bins=cut_bins, labels = cut_label) #New column with binned data
 q=d.groupby(["x1_bins"]).mean() # q is a different dataframe with cut_label as index. Rherefore, is a set, repetitions are replaced by the average value.
 ```
+Groupby operations  
+```
+https://www.shanelynn.ie/summarising-aggregation-and-grouping-data-in-python-pandas/
+```
+
 Iterate over rows:  **WARNING!! does not preserv data type** 
 ```
 for index, row in data.iterrows():
