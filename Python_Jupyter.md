@@ -155,6 +155,14 @@ where mode can be: w-->write
 -->cerrar fichero: close mehod .--> file_variable.close() 
 ```
 
+### os
+Check for files, if there is not file --> rerun program 
+```
+import os
+if (os.path.isfile("PATH/FILENAME")==False):
+	os.system("./exe.x {} {} {} {}".format(parameter1,parameter2,parameter3,parameter4)
+```
+
 ### FUNCIONES
 Useful defined functions
 ```
