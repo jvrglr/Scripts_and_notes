@@ -207,6 +207,15 @@ Enumerate-like for 2D arrays:
 for (x,y),value in np.ndenumerate(numpy array):
 	...
 ```
+Save in binary:
+```
+np.save("PATH/file_name.npy", Numpy_array, allow_pickle=True, fix_imports=True)
+
+```
+Load from binary:
+```
+Q=np.load("PATH/file_name.npy")
+```
 Notes:
 ```
 ---> Array: Es parecido a una lista, pero las operaciones definidas sobre arrays son como las operaciones
