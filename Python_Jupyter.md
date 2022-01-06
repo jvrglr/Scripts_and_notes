@@ -12,7 +12,7 @@ import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
 from matplotlib import cm
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
-import matplotlib.patches as mpatches
+import matplotlib.patches as patches
 #%matplotlib inline
 
 
@@ -413,6 +413,16 @@ plt.yticks(fontsize=20)
 plt.legend(fontsize=15)
 plt.savefig("Imax_Nat_review.pdf", bbox_inches='tight')
 ```
+Add coloured rectangle
+```
+import matplotlib.patches as patches
+
+# Create a Rectangle patch
+rect = patches.Rectangle((x0, y0), dx, dy, linewidth=1, edgecolor='r', facecolor='grey',alpha=0.3)
+ax = plt.gca()
+# Add the patch to the Axes
+ax.add_patch(rect)
+```
 Vector fields with quiver
 https://krajit.github.io/sympy/vectorFields/vectorFields.html
 https://matplotlib.org/stable/gallery/images_contours_and_fields/quiver_demo.html#sphx-glr-gallery-images-contours-and-fields-quiver-demo-py
@@ -430,8 +440,8 @@ plt.quiver(x,y,u,v,M,alpha=0.5,width=0.005,
 Add legend item manually
 https://stackoverflow.com/questions/39500265/manually-add-legend-items-python-matplotlib
 ```
-import matplotlib.patches as mpatches
-red_patch = mpatches.Patch(color='red', label="red")
+import matplotlib.patches as patches
+red_patch = patches.Patch(color='red', label="red")
 plt.legend(handles=[red_patch])
 ```
 2D heatmap from dataframe using Seaborn
@@ -505,7 +515,7 @@ Add text to scatter plot:
 ```
 city=["name1","name2",...,"namen"]
 for i, txt in enumerate(city):
-    plt.annotate(txt, (x[i], y[i]))
+    plt.annotate(txt, (x[i], y[i]),fontsize=20)
 ```
 Add xtics with name:
 ```
