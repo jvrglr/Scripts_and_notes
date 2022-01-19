@@ -416,8 +416,8 @@ def Plot_bonito(xlabel=r"$name_x$",ylabel=r"$name_y$"):
 	plt.figure(figsize=(8,6))
 	plt.rcParams['axes.linewidth']=2 #marco doble
 	plt.tick_params(labelsize=24)
-	plt.xlabel(r"$X_s$ value",fontsize=30)
-	plt.ylabel("Frecuency",fontsize=30)
+	plt.xlabel(xlabel,fontsize=30)
+	plt.ylabel(ylabel,fontsize=30)
 	plt.xticks(fontsize=20)
 	plt.yticks(fontsize=20)
 	plt.legend(fontsize=15)
