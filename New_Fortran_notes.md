@@ -3,7 +3,7 @@ Brainerd, W. S. (2009). Guide to Fortran 2003 programming (pp. 1-326). Berlin: S
 
 ### Array
 Assumed shape: Array declarations in modules, functions,...  
-The user has to make explicit the lowerbound of the arrat if it is different from 1.  
+The user has to make explicit the lowerbound of the array if it is different from 1.  
 ```
 subroutine test()
 implicit none
@@ -11,6 +11,10 @@ double precision, dimension(lowerbound:), intent(inout) :: array1
 
 
 subroutine test
+```
+Define array from keyboard:
+```
+double precision :: x(2)=(/1.0d0 5.0d0/)
 ```
 
 ### Count
