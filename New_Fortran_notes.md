@@ -14,7 +14,7 @@ subroutine test
 ```
 Define array from keyboard:
 ```
-double precision :: x(2)=(/1.0d0 5.0d0/)
+double precision :: x(2)=(/1.0d0,5.0d0/)
 ```
 
 ### Count
