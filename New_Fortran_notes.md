@@ -41,6 +41,8 @@ https://stackoverflow.com/questions/42348449/fortran-not-writing-to-screen-while
 
 3. carefull with type conversion! let i, n be integers,  ```i**n ``` is different from ```dble(i)**n``` !!!!
 
+4. Integer division truncates by deafault: 5/2 generates 2 as outcome. nint(dble(5)/2) generates 3 as outcome. 
+
 ### From number to string and vice versa
 https://coderwall.com/p/dqwzea/str2num-and-num2str-functions-in-fortran
 
