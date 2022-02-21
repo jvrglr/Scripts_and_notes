@@ -32,6 +32,23 @@ https://www.numfys.net/howto/F2PY/
   
   
 ### Networx
+Create Edge list
+```
+#From networxs network to edge list. len(Ed)=len(G.nodes())*k_max
+#Ed[i][0]=degree(i)
+#Ed[i][j]=jth neighbor of i if j<degree(i)
+#Ed[i][j]=0 if j>degree(i)
+N=len(G.nodes())
+ks=dict(G.degree())
+k_max=max(ks.values())
+Edge_list=np.zeros((N,k_max+1),dtype=int)
+for n in G.nodes():
+    Edge_list[n][0]=ks[n]
+    for index,label in enumerate(G.neighbors(n)):
+        Edge_list[n][index+1]=label+1
+np.savetxt("networks/test_lattice.dat",Edge_list.T,delimiter=" ",fmt="%d") #Save so it is easily readable by fortran program 
+
+```
 Note -> a networkx Digraph object is a dictionary whose basic keys are:
 ```
 G[source][target]["weight"] #source and target are node labels
