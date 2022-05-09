@@ -1,8 +1,9 @@
 ### Table of Contents
 
 * [Jupyter notebook](#chapter1)
+* [Calling Fortran routines from Python] (#chapter1)
 
-# Jupyter notebook <a class="anchor" id="chapter1"></a>
+### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
 #%matplotlib notebook
 import sys
@@ -31,7 +32,8 @@ def Plot_bonito(xlabel=r"$name_x$",ylabel=r"$name_y$"):
 
 
 ```
-### Calling Fortran routines from Python
+
+### Calling Fortran routines from Python<a class="anchor" id="chapter2"></a>
 https://www.numfys.net/howto/F2PY/  
   
   
