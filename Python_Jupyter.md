@@ -4,6 +4,7 @@
 * [Calling Fortran routines from Python](#chapter2)
 * [Networkx](#chapter3)
 * [Input/ Data from 'keyboard'](#chapter4)
+* [Measure time](#chapter 5)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -132,7 +133,7 @@ import sys
 y = float(sys.argv[1]) # y==$value
 ```
 
-### Measure time
+### Measure time <a class="anchor" id="chapter5"></a>
 ```
 import time
 
@@ -250,6 +251,11 @@ np.save("PATH/file_name.npy", Numpy_array, allow_pickle=True, fix_imports=True)
 Load from binary:
 ```
 Q=np.load("PATH/file_name.npy")
+```
+Save list as columns specifying format on txt file:
+Format documentation: https://docs.python.org/3/library/string.html#format-specification-mini-language
+```
+np.savetxt("PATH/FILENAME",np.c_[list1,list2,list3,t],fmt='%.4f') # floating point with four decimals
 ```
 Notes:
 ```
