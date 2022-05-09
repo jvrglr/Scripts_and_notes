@@ -3,6 +3,7 @@
 * [Jupyter notebook](#chapter1)
 * [Calling Fortran routines from Python](#chapter2)
 * [Networkx](#chapter3)
+* [Input/ Data from 'keyboard'](#chapter4)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -121,7 +122,7 @@ plt.savefig("./NY_with_filter.png", format = "png", dpi = 300)
 plt.show()
 
 ```
-### Data from 'keyboard'
+### Input/ Data from 'keyboard' <a class="anchor" id="chapter4"></a>
 ```
 #How to run program: python program.py $value
 
