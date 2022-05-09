@@ -1,7 +1,7 @@
 ### Table of Contents
 
 * [Jupyter notebook](#chapter1)
-* [Calling Fortran routines from Python] (#chapter1)
+* [Calling Fortran routines from Python](#chapter2)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
