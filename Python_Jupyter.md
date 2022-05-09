@@ -1,4 +1,8 @@
-### Jupyter notebook
+### Table of Contents
+
+* [Jupyter notebook](#chapter1)
+
+# Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
 #%matplotlib notebook
 import sys
