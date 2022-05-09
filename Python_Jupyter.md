@@ -2,6 +2,7 @@
 
 * [Jupyter notebook](#chapter1)
 * [Calling Fortran routines from Python](#chapter2)
+* [Networkx](#chapter3)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -37,7 +38,7 @@ def Plot_bonito(xlabel=r"$name_x$",ylabel=r"$name_y$"):
 https://www.numfys.net/howto/F2PY/  
   
   
-### Networx
+### Networx <a class="anchor" id="chapter3"></a>
 Create Edge list
 ```
 #From networxs network to edge list. len(Ed)=len(G.nodes())*k_max
