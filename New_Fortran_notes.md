@@ -50,7 +50,8 @@ https://stackoverflow.com/questions/42348449/fortran-not-writing-to-screen-while
 5. WORK ALWAYS IN DOUBLE PRECISION--> int*8!! if a,b are positive numbers of integer type and a*b>max(integer type) then the output a*b is NEGATIVE!!! TRY TO AVOID THIS SITUATION. ESTIMATE RANGE OF VARIABLES!
 
 6. FORTRAN uses column-major ordering! Meaning that first index runs quickier than the second (and so on with the third and fourth)!! So wrihte do loops like this: 
-```   do i = 1, N, 1
+``` 
+do i = 1, N, 1
     do j = 1, N, 1
       M(j,i)=...
     end do
