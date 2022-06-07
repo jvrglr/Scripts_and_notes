@@ -57,7 +57,7 @@ do i = 1, N, 1
     end do
   end do
 ``` 
-This loop runs, at least, twice faster than a loop evaluating M(i,j),
+This loop runs, at least, twice faster than the same loop evaluating M(i,j),
 
 ### From number to string and vice versa
 https://coderwall.com/p/dqwzea/str2num-and-num2str-functions-in-fortran
