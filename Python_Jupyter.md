@@ -7,6 +7,7 @@
 * [Measure time](#chapter5)
 * [Try/except](#chapter5)
 * [Zip/unzip](#zip)
+* [Logical operators](#Logical_operators)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -159,7 +160,14 @@ except:
 
 https://www.geeksforgeeks.org/python-unzip-a-list-of-tuples/
 
-### OPERADORES LÓGICOS
+List of tuples: https://www.programiz.com/python-programming/methods/built-in/zip
+``` 
+Let x=[x1,x2,x3,...], y=[y1,y2,y3,...]
+Then list(zip(x,y))= [(x1,y1),(x2,y2),(x3,y3),...]   
+```
+
+
+### OPERADORES LÓGICOS <a class="anchor" id="Logical_operators"></a>
 ```
 --> != "diferente que"  
 --> >= "menor o igual"  
@@ -168,10 +176,7 @@ https://www.geeksforgeeks.org/python-unzip-a-list-of-tuples/
 ```
 
 ### LISTAS
-``` 
---> crear lista de tuplas con zip: sea x=[x1,x2,x3,...], y=[y1,y2,y3,...]--> list(zip(x,y))= [(x1,y1),(x2,y2),(x3,y3),...]   
-https://www.programiz.com/python-programming/methods/built-in/zip
-```
+
 
 ### FICHEROS
 Save numpy array as columns
