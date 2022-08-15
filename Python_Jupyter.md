@@ -8,6 +8,9 @@
 * [Try/except](#chapter5)
 * [Zip/unzip](#zip)
 * [Logical operators](#Logical_operators)
+* [Files](#Files)
+* [OS](#OS)
+* [Functions](#Functions)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -175,10 +178,8 @@ Then list(zip(x,y))= [(x1,y1),(x2,y2),(x3,y3),...]
 --> in --> x in lista, si x es un elemento de lista devuelve true  
 ```
 
-### LISTAS
 
-
-### FICHEROS
+### FILES <a class="anchor" id="Files"></a>
 Save numpy array as columns
 ```
 np.savetxt("filename.dat",np.c_[v1,v2]) #save two numpy arrays (v1,v2) as columns in file
@@ -198,7 +199,7 @@ where mode can be: w-->write
 -->cerrar fichero: close mehod .--> file_variable.close() 
 ```
 
-### os
+### os <a class="anchor" id="OS"></a>
 Check for files, if there is not file --> rerun program 
 ```
 import os
@@ -206,7 +207,7 @@ if (os.path.isfile("PATH/FILENAME")==False):
 	os.system("./exe.x {} {} {} {}".format(parameter1,parameter2,parameter3,parameter4)
 ```
 
-### FUNCIONES
+### FUNCTIONS <a class="anchor" id="Functions"></a>
 Useful defined functions
 ```
 def G(x,mu,sig):
