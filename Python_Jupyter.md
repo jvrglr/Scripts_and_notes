@@ -450,6 +450,10 @@ for col in data.columns:
 	continue (c) -->  Continue execution till next breakpoint
 ```
 ### MATPLOTLIB
+Proper setting for errorbar: No lines connecting data and errorbar centered on point
+```
+plt.errorbar(xdata,ydata,yerr=y_errors,capsize=10,fmt="none",color="darkblue",lw=1)
+```
 Nat. Com. review matplotlib options (By Mattia)
 ```
 def Plot_bonito(xlabel=r"$name_x$",ylabel=r"$name_y$"):
