@@ -6,7 +6,7 @@
 * [Input/ Data from 'keyboard'](#chapter4)
 * [Measure time](#chapter5)
 * [Try/except](#chapter5)
-* [zip/unzip](#zip)
+* [Zip/unzip](#zip)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
