@@ -6,6 +6,7 @@
 * [Input/ Data from 'keyboard'](#chapter4)
 * [Measure time](#chapter5)
 * [Try/except](#chapter5)
+* [zip/unzip](#zip)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -154,7 +155,7 @@ except KeyError:
 except:
     print("Something else went wrong") 
 ```
-### zip - unzip (from touples to separate lists and viceversa)
+### zip - unzip (from touples to separate lists and viceversa) <a class="anchor" id="zip"></a>
 
 https://www.geeksforgeeks.org/python-unzip-a-list-of-tuples/
 
