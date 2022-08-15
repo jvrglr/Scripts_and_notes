@@ -5,6 +5,7 @@
 * [Networkx](#chapter3)
 * [Input/ Data from 'keyboard'](#chapter4)
 * [Measure time](#chapter5)
+* [Try/except](#chapter5)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -142,7 +143,7 @@ print("hello")
 end = time.time()
 print(end - start)
 ```
-### Try/except
+### Try/except <a class="anchor" id="chapter6"></a>
 Execute {Try module}, if there is no error. if There is error in Try module, then Execute {Except module}.
 "The classical Python mentality, though, is that it's easier to ask forgiveness than permission."
 ```
