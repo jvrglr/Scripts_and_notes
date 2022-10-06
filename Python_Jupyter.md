@@ -29,15 +29,15 @@ from matplotlib.ticker import LinearLocator, FormatStrFormatter
 import matplotlib.patches as patches
 %matplotlib inline
 
-def Plot_bonito(xlabel=r"$name_x$",ylabel=r"$name_y$"):
+def Plot_bonito(xlabel=r"$name_x$",ylabel=r"$name_y$",label_font_size=30,ticks_size=20,y_size=6,x_size=8):
 	plt.rcParams.update({'font.size':12})
-	plt.figure(figsize=(8,6))
+	plt.figure(figsize=(x_size,y_size))
 	plt.rcParams['axes.linewidth']=2 #marco doble
 	plt.tick_params(labelsize=24)
-	plt.xlabel(xlabel,fontsize=30)
-	plt.ylabel(ylabel,fontsize=30)
-	plt.xticks(fontsize=20)
-	plt.yticks(fontsize=20)
+	plt.xlabel(xlabel,fontsize=label_font_size)
+	plt.ylabel(ylabel,fontsize=label_font_size)
+	plt.xticks(fontsize=ticks_size)
+	plt.yticks(fontsize=ticks_size)
 
 
 ```
