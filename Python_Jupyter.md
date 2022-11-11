@@ -11,6 +11,8 @@
 * [Files](#Files)
 * [OS](#OS)
 * [Functions](#Functions)
+* [Numpy](#Numpy)
+* [Strings](#Strings)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -250,7 +252,7 @@ ej: list=[thing1,thing2,...]---> def some_function (*list):
 my_func(hello)-->"hello"
 my_func()-->default
 ```
-### Numpy
+### Numpy <a class="anchor" id="Numpy"></a>
 Enumerate-like for 2D arrays:
 ```
 for (x,y),value in np.ndenumerate(numpy array):
@@ -293,7 +295,7 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 --> v(sentencia_logica) "=" vector con todos los elementos de v que hacen True la sentencia_logica
 --> UNIVERSAL ARRAY FUNCTIONS https://docs.scipy.org/doc/numpy/reference/ufuncs.html
 ```
-### STRINGS
+### STRINGS <a class="anchor" id="Strings"></a>
 ```
 --> puedo pensar en un string como en una lista: x="Hola"--> x[0]=H
 	#.split()
