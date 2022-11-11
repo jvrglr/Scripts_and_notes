@@ -208,7 +208,7 @@ if (os.path.isfile("PATH/FILENAME")==False):
 ```
 
 ### FUNCTIONS <a class="anchor" id="Functions"></a>
-Useful defined functions
+Useful distributions functions
 ```
 def G(x,mu,sig):
     PI=np.pi
@@ -227,6 +227,11 @@ def lgnorm(x,mu,sig):
 
 vlgnorm=np.vectorize(G)
 ```
+Rolling/moving average: f is a numpy array. Compute new array with simple moving average (average bin=N). https://en.wikipedia.org/wiki/Moving_average
+```
+Moving_mean=np.convolve(f, np.ones(N)/N, mode="same")
+```
+
 Comentarios:
 ```
 --> se abren y cierran con tres comillas """  
