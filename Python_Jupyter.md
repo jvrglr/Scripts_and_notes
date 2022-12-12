@@ -465,6 +465,11 @@ for col in data.columns:
 	continue (c) -->  Continue execution till next breakpoint
 ```
 ### MATPLOTLIB
+Plot dates in x axis:
+```
+date_time = pd.to_datetime(d["temporal_data"])
+plt.plot(date_time,y_data)
+```
 Proper setting for errorbar: No lines connecting data and errorbar centered on point
 ```
 plt.errorbar(xdata,ydata,yerr=y_errors,capsize=10,fmt="none",color="darkblue",lw=1)
