@@ -8,11 +8,15 @@
 * [Try/except](#chapter6)
 * [Zip/unzip](#chapter7)
 * [Logical operators](#chapter8)
-* [Files](#Files)
-* [OS](#OS)
-* [Functions](#Functions)
-* [Numpy](#Numpy)
-* [Strings](#Strings)
+* [Files](#chapter9)
+* [OS](#chapter10)
+* [Functions](#chapter11)
+* [Numpy](#chapter12)
+* [Strings](#chapter13)
+* [Dictionary](#chapter14)
+* [Booleans](#chapter15)
+* [Tuple](#chapter16)
+* [Set](#chapter17)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -181,7 +185,7 @@ Then list(zip(x,y))= [(x1,y1),(x2,y2),(x3,y3),...]
 ```
 
 
-### FILES <a class="anchor" id="Files"></a>
+### FILES <a class="anchor" id="chapter9"></a>
 Save numpy array as columns
 ```
 np.savetxt("filename.dat",np.c_[v1,v2]) #save two numpy arrays (v1,v2) as columns in file
@@ -201,7 +205,7 @@ where mode can be: w-->write
 -->cerrar fichero: close mehod .--> file_variable.close() 
 ```
 
-### os <a class="anchor" id="OS"></a>
+### os <a class="anchor" id="chapter10"></a>
 Check for files, if there is not file --> rerun program 
 ```
 import os
@@ -209,7 +213,7 @@ if (os.path.isfile("PATH/FILENAME")==False):
 	os.system("./exe.x {} {} {} {}".format(parameter1,parameter2,parameter3,parameter4)
 ```
 
-### FUNCTIONS <a class="anchor" id="Functions"></a>
+### FUNCTIONS <a class="anchor" id="chapter11"></a>
 Useful distributions functions
 ```
 def G(x,mu,sig):
@@ -252,7 +256,7 @@ ej: list=[thing1,thing2,...]---> def some_function (*list):
 my_func(hello)-->"hello"
 my_func()-->default
 ```
-### Numpy <a class="anchor" id="Numpy"></a>
+### Numpy <a class="anchor" id="chapter12"></a>
 Enumerate-like for 2D arrays:
 ```
 for (x,y),value in np.ndenumerate(numpy array):
@@ -295,7 +299,7 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 --> v(sentencia_logica) "=" vector con todos los elementos de v que hacen True la sentencia_logica
 --> UNIVERSAL ARRAY FUNCTIONS https://docs.scipy.org/doc/numpy/reference/ufuncs.html
 ```
-### STRINGS <a class="anchor" id="Strings"></a>
+### STRINGS <a class="anchor" id="chapter13"></a>
 ```
 --> puedo pensar en un string como en una lista: x="Hola"--> x[0]=H
 	#.split()
@@ -313,7 +317,7 @@ Sintaxis: a=np.array([1.0,2.0,3.0,4.0]). a[0] "=" 1.0
 	>name = 'Sam'
 	print('My number is: {one}, and my name is: {two}'.format(one=num,two=name))--->My number is: 12, and my name is: Sam
 ```
-### DICTIONARY / DICCIONARIOS
+### DICTIONARY <a class="anchor" id="chapter14"></a>
 Definition:
 ```
 # Es una hash table.
@@ -345,13 +349,13 @@ Save dictionary on file using pandas:
 ```
 pd.DataFrame.from_dict(data=dicname, orient='index').to_csv('file_name.csv', header=False)
 ```
-### BOOLEANS
+### BOOLEANS <a class="anchor" id="chapter15"></a>
 "True" and "False" !WITH CAPITALS T AND F!
 
-### TUPLA
+### TUPLE <a class="anchor" id="chapter16"></a>
 parecido a lista, su sintaxis es con () en vez de []. Sus elementos son inmutables, no puedo hacer tupla(0) = "nuevo_valor"
 
-### SET
+### SET <a class="anchor" id="chapter17"></a>
 Definition and syntax:
 ```
 --> sintaxis parecida a diccionario, set={1,2,3,4}, pero sin key:value.  
