@@ -5,9 +5,9 @@
 * [Networkx](#chapter3)
 * [Input/ Data from 'keyboard'](#chapter4)
 * [Measure time](#chapter5)
-* [Try/except](#chapter5)
-* [Zip/unzip](#zip)
-* [Logical operators](#Logical_operators)
+* [Try/except](#chapter6)
+* [Zip/unzip](#chapter7)
+* [Logical operators](#chapter8)
 * [Files](#Files)
 * [OS](#OS)
 * [Functions](#Functions)
@@ -161,7 +161,7 @@ except KeyError:
 except:
     print("Something else went wrong") 
 ```
-### zip - unzip (from touples to separate lists and viceversa) <a class="anchor" id="zip"></a>
+### zip - unzip (from touples to separate lists and viceversa) <a class="anchor" id="chapter7"></a>
 
 https://www.geeksforgeeks.org/python-unzip-a-list-of-tuples/
 
@@ -172,7 +172,7 @@ Then list(zip(x,y))= [(x1,y1),(x2,y2),(x3,y3),...]
 ```
 
 
-### OPERADORES LÓGICOS <a class="anchor" id="Logical_operators"></a>
+### OPERADORES LÓGICOS <a class="anchor" id="chapter8"></a>
 ```
 --> != "diferente que"  
 --> >= "menor o igual"  
