@@ -17,6 +17,9 @@
 * [Booleans](#chapter15)
 * [Tuple](#chapter16)
 * [Set](#chapter17)
+* [List](#chapter18)
+* [Map](#chapter19)
+* [Filter](#chapter20)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -369,7 +372,9 @@ Append:
 --> añado elementos al set con el método .add, que funciona igual que el método .append  
 ```
 
-### LIST COMPREHENSION
+### LIST <a class="anchor" id="chapter18"></a>
+List comprehension
+```
 --> forma abreviada de crear una lista, en vez de con el método .append  
 	sea x= [1,2,3,4], queremos crar una nueva lista "out", tal que out[i]=x[i]**2 con i en range(1:5)  
 		CON LIST COMPREHENSION  
@@ -377,9 +382,10 @@ Append:
 		CON MÉTODO .APPEND  
 		-->out= [] #empty list  
 		-->for num in x:  
-			-->out.append(num)  
+			-->out.append(num)
+```
 
-### MAP
+### MAP <a class="anchor" id="chapter19"></a>
 -->" it maps a function to every element of an iterable"
 -->map(funcion,iterable)-->ejecuta la funcion sobre todos los elementos del iterable. si queremos que el resultado sea una lista,
 hemos de usar list(map(...,...)).
@@ -387,7 +393,7 @@ hemos de usar list(map(...,...)).
 	-->x=[1,2]
 	-->list(map(lambda var: var*3,x)) "=" [3,6]
 
-### FILTER
+### FILTER <a class="anchor" id="chapter20"></a>
 -->muy parecida a la funcion map, filter(func,iterable), la funcion ha de devolver un booleano. list(filter(func,iterable)) 
 tiene como elementos a los elementos de iterable tales que han generado un valor "True" en func.
 
