@@ -23,6 +23,7 @@
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
+%reset #delete variables/names
 #%matplotlib notebook
 import sys
 from scipy.optimize import curve_fit
