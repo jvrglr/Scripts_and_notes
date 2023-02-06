@@ -2,6 +2,12 @@
 Brainerd, W. S. (2009). Guide to Fortran 2003 programming (pp. 1-326). Berlin: Springer.  
 
 ### Array
+Append to array (VERY SLOW!!): https://stackoverflow.com/a/38764384/11446712
+```
+ x_old = [ 1.0d0,2.0d0,3.0d0 ]
+ x_new = [ x_old,5.0d0 ] !append "5.0" to x_old
+ x_new = [ x_old, x_old] !append x_old to x_old
+```
 Assumed shape: Array declarations in modules, functions,...  
 The user has to make explicit the lowerbound of the array if it is different from 1.  
 ```
