@@ -8,6 +8,7 @@ This will show only new version in bold
 latexdiff --type=BOLD old.tex new.tex > diff.tex
 ```
 To show only new in blue: https://tex.stackexchange.com/questions/251224/only-highlighting-new-parts-added.
+
 Use previous solution to show in bold and change this line:
 ```
 \providecommand{\DIFadd}[1]{{\bf #1}} %DIF PREAMBLE
