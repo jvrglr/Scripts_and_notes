@@ -1,4 +1,4 @@
-## pdf diff
+## latexdiff
 This will show new version (in blue) and crossed old version (in red)
 ```
 latexdiff old.tex new.tex > diff.tex
@@ -7,7 +7,8 @@ This will show only new version in bold
 ```
 latexdiff --type=BOLD old.tex new.tex > diff.tex
 ```
-To show only new in blue, use previous solution to show in bold and change this line:
+To show only new in blue: https://tex.stackexchange.com/questions/251224/only-highlighting-new-parts-added.
+Use previous solution to show in bold and change this line:
 ```
 \providecommand{\DIFadd}[1]{{\bf #1}} %DIF PREAMBLE
 ```
