@@ -18,7 +18,7 @@ By these lines:
 \RequirePackage[normalem]{ulem} %DIF PREAMBLE
 \RequirePackage{color}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
 \providecommand{\DIFadd}[1]{{\protect\color{blue}#1}} %DIF PREAMBLE
-``
+```
 
 ## Append labeled list of files
 ```
