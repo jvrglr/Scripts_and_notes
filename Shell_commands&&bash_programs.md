@@ -1,4 +1,4 @@
-## latexdiff
+## latexdiff 
 This will show new version (in blue) and crossed old version (in red)
 ```
 latexdiff old.tex new.tex > diff.tex
