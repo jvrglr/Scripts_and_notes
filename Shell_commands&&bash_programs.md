@@ -1,5 +1,22 @@
-# Table of Contents
-1. [Check](#example)
+## pdf diff
+This will show new version (in blue) and crossed old version (in red)
+```
+latexdiff old.tex new.tex > diff.tex
+```
+This will show only new version in bold
+```
+latexdiff --type=BOLD old.tex new.tex > diff.tex
+```
+To show only new in blue, use previous solution to show in bold and change this line:
+```
+\providecommand{\DIFadd}[1]{{\bf #1}} %DIF PREAMBLE
+```
+By these lines:
+```
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}#1}} %DIF PREAMBLE
+``
 
 ## Append labeled list of files
 ```
