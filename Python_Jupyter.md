@@ -670,7 +670,14 @@ plt.plot(x,y,"r--")
 	fig, axes = plt.subplots(1, 2, figsize=(10,4)) --> 10x4 inches
 ```
 
-
+### Efficiency
+In general, it is more efficient to iterate over the "inner" dimension first (in this case, j), followed by the "outer" dimension (in this case, i). The reason is that numpy arrays are stored in memory in a row-major order. By iterating over the inner dimension first, you access contiguous memory locations, which can take better advantage of the CPU cache and improve performance.
+```
+for i in list1:
+	for j in list2:
+		m[j][i]=something #inner first!
+``
+```
 
 
 					
