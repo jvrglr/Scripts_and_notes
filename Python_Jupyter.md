@@ -20,6 +20,10 @@
 * [List](#chapter18)
 * [Map](#chapter19)
 * [Filter](#chapter20)
+* [Import](#chapter21)
+* [Pandas](#chapter22)
+* [Debugger](#chapter23)
+* [Matplotlib](#chapter24)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -407,13 +411,13 @@ hemos de usar list(map(...,...)).
 -->muy parecida a la funcion map, filter(func,iterable), la funcion ha de devolver un booleano. list(filter(func,iterable)) 
 tiene como elementos a los elementos de iterable tales que han generado un valor "True" en func.
 
-### IMPORT FUNCTION FROM A MODULE  
+### IMPORT FUNCTION FROM A MODULE <a class="anchor" id="chapter21"></a> 
 
 two different (and equivalent) methods:
 --> from module import function // function(variables)
 --> import module // module.function(variables)
 
-### PANDAS DATAFRAME  
+### PANDAS DATAFRAME <a class="anchor" id="chapter22"></a>  
 Binning data and groupby
 ```
 cut_bins =np.arange(0,1.3,1.0/50) #Limits of the bins
@@ -475,7 +479,7 @@ Print columns:
 for col in data.columns: 
     print(col) 
 ```
-### PDB DEBUGGER // DEPURADO // DEPURATE
+### PDB DEBUGGER // DEPURADO // DEPURATE <a class="anchor" id="chapter23"></a>
 ```
 -->import pdb
 --> python3 -m pdb myscript.py --> invoke pdb from shell to debugg "myscript.py"
@@ -484,7 +488,7 @@ for col in data.columns:
 	step (s) --> execute current line
 	continue (c) -->  Continue execution till next breakpoint
 ```
-### MATPLOTLIB
+### MATPLOTLIB <a class="anchor" id="chapter24"></a>
 Plot dates in x axis:
 ```
 date_time = pd.to_datetime(d["temporal_data"])
