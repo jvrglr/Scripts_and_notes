@@ -65,6 +65,8 @@ do i = 1, N, 1
 ``` 
 This loop runs, at least, twice faster than the same loop evaluating M(i,j),
 
+7. Raul Toral told me that the file extension is important for the gfortran compiler: program.f and program.f90 are compiled in different ways!
+
 ### From number to string and vice versa
 https://coderwall.com/p/dqwzea/str2num-and-num2str-functions-in-fortran
 
