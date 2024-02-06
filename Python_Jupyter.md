@@ -43,24 +43,25 @@ from matplotlib.ticker import LinearLocator, FormatStrFormatter
 import matplotlib.patches as patches
 %matplotlib inline
 
-def Plot_bonito(xlabel=r"$name_x$",ylabel=r"$name_y$",label_font_size=30,ticks_size=20,y_size=6,x_size=8):
-#-------------------------LATEX FONT-----------------
-	matplotlib.rcParams.update({'figure.autolayout': True})
-	matplotlib.rcParams['mathtext.fontset'] = 'custom'
-	matplotlib.rcParams['mathtext.rm'] = 'Bitstream Vera Sans'
-	matplotlib.rcParams['mathtext.it'] = 'Bitstream Vera Sans:italic'
-	matplotlib.rcParams['mathtext.bf'] = 'Bitstream Vera Sans:bold'
-	matplotlib.rcParams['mathtext.fontset'] = 'cm'
-	matplotlib.rcParams['font.family'] = 'STIXGeneral'
+def Plot_bonito(xlabel=r"name_x$",ylabel=r"name_y$",label_font_size=15,ticks_size=12,y_size=2.1,x_size=2.8):
+    #FOR SINGLE COLUMN FIGURE; ,y_size=2.4,x_size=3.2
+    #FOR TWO FIGURES TWO COLUMNS: ,y_size=2.1,x_size=2.8
+    matplotlib.rcParams.update({'figure.autolayout': True})
+    matplotlib.rcParams['mathtext.fontset'] = 'custom'
+    matplotlib.rcParams['mathtext.rm'] = 'Bitstream Vera Sans'
+    matplotlib.rcParams['mathtext.it'] = 'Bitstream Vera Sans:italic'
+    matplotlib.rcParams['mathtext.bf'] = 'Bitstream Vera Sans:bold'
+    matplotlib.rcParams['mathtext.fontset'] = 'cm'
+    matplotlib.rcParams['font.family'] = 'STIXGeneral'
 #-----------------------------------------------------
-	plt.rcParams.update({'font.size':12})
-	plt.figure(figsize=(x_size,y_size))
-	plt.rcParams['axes.linewidth']=2 #Grosor del marco (doble del standard)
-	plt.tick_params(labelsize=24)
-	plt.xlabel(xlabel,fontsize=label_font_size)
-	plt.ylabel(ylabel,fontsize=label_font_size)
-	plt.xticks(fontsize=ticks_size)
-	plt.yticks(fontsize=ticks_size)
+    plt.rcParams.update({'font.size':12})
+    plt.figure(figsize=(x_size,y_size))
+    plt.rcParams['axes.linewidth']=2 #Grosor del marco (doble del standard)
+    plt.tick_params(labelsize=24)
+    plt.xlabel(xlabel,fontsize=label_font_size)
+    plt.ylabel(ylabel,fontsize=label_font_size)
+    plt.xticks(fontsize=ticks_size)
+    plt.yticks(fontsize=ticks_size)
 
 
 ```
