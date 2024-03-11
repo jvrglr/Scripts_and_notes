@@ -23,7 +23,7 @@ contains
 
   end subroutine read_xF_tf
   
-  subroutine search_list_binary_algoritm(list,position,p)
+  subroutine search_list_binary_algorithm(list,position,p)
     !Rafle event:
     !Given a list of probabilities called "list" such that sum(list)=1 and a probability p.
     !Look for "position" such that C(position)>=p and C(j)<p for all j in [1,position[.
@@ -55,6 +55,40 @@ contains
 
     position=first
 
-  end subroutine search_list_binary_algoritm
+  end subroutine search_list_binary_algorithm
+
+  subroutine float_to_string(a, n, result)
+    !Convert float number a to string with format int(a)//"d"//dec(a).
+    !E.g. 0.00543--> "0d00543"
+    !For dec(a) select first n decimals
+    !If number of digits in dec(a)>n then add zeros to the left
+    double precision, intent(in) :: a
+    integer, intent(in) :: n
+    character(len=*), intent(out) :: result
+    character(len=n) :: dumc
+    integer :: digit,zeros
+
+  
+    integer :: int_part
+    double precision :: dec_part
+  
+    ! Get the integer and decimal parts
+    int_part = int(a)
+    dec_part = a - int_part
+
+    ! Convert the decimal part to a string with n digits
+    zeros=0
+    digit=int(dec_part*10**(zeros+1))
+    do while ((digit==0).and.(zeros<n))
+      zeros=zeros+1
+      digit=int(dec_part*10**(zeros+1))
+    enddo
+    dumc=repeat("0",zeros)//trim(str(int(dec_part*10**(n)))) 
+
+
+    result=trim(str(int_part))//"d"//trim(dumc)
+
+  
+  end subroutine float_to_string
 
 end module subroutines
