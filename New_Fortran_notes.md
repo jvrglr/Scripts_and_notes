@@ -1,6 +1,12 @@
 ### References
 Brainerd, W. S. (2009). Guide to Fortran 2003 programming (pp. 1-326). Berlin: Springer.  
 
+### Asign NaN to variable
+```
+use, intrinsic :: ieee_arithmetic
+...
+var = ieee_value(var, ieee_quiet_nan) ! Asign NaN to var
+```
 ### Array
 Append to array (VERY SLOW!!): https://stackoverflow.com/a/38764384/11446712
 ```
