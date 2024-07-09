@@ -496,7 +496,7 @@ color1 = (211/255, 211/255, 211/255)
 color2 = (70/255, 130/255, 180/255)
 colors = [color1, color2]  # RGB for white and steelblue
 n_bins = 100  # Number of bins for the colormap
-steelblue_cmap = LinearSegmentedColormap.from_list('steelblue_cmap', colors, N=n_bins)
+custom_cmap = LinearSegmentedColormap.from_list('steelblue_cmap', colors, N=n_bins)
 plt.scatter(x_data,y_data,c=color_data,s=s,cmap=custom_cmap)
 ```
 Plot dates in x axis:
