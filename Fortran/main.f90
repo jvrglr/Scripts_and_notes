@@ -1,4 +1,4 @@
-program Main_program
+program main_program
   !Main program, depends on the rest of modules (declarations_module, functions and subroutines))
   use declarations_module
   use functions
@@ -11,4 +11,4 @@ program Main_program
   !Do stuff
 
   !Deallocate and close files
-101 end program Main_program
+101 end program main_program
