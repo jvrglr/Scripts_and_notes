@@ -506,7 +506,9 @@ plt.plot(date_time,y_data)
 ```
 Proper setting for errorbar: No lines connecting data and errorbar centered on point
 ```
-plt.errorbar(xdata,ydata,yerr=y_errors,capsize=10,fmt="none",color="darkblue",lw=1)
+color = "darkblue"
+plt.errorbar(xdata,ydata,yerr=y_errors,capsize=10,fmt="none",color=color,lw=1)
+plt.scatter(xdata,ydata,color=color)
 ```
 Nat. Com. review matplotlib options (By Mattia)
 ```
