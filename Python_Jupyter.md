@@ -222,7 +222,44 @@ where mode can be: w-->write
 -->leer de fichero de datos y pasar a np array: np.loadtxt(file_variable,dtype=float)  
 -->cerrar fichero: close mehod .--> file_variable.close() 
 ```
+Read files of the type
+a = 1  2  3
+b = 2  2  2
+creating lists of the type a= [1,2,3], b =[2,2,2]
+```
+import numpy as np
+import re
 
+# Initialize a dictionary to store variables as numpy arrays
+variables = {}
+
+# Open and read the file
+with open('your_file.txt', 'r') as file:
+    lines = file.readlines()
+
+# Loop through each line and extract numbers
+for line in lines:
+    # Remove leading and trailing whitespaces
+    line = line.strip()
+
+    # Use regex to extract the variable name and numbers
+    match = re.match(r'([\w\(\),:]+)\s*=\s*(.*)', line)
+    if match:
+        var_name = match.group(1)  # Variable name (e.g., C(t=0), a(1,:), etc.)
+        values = match.group(2)    # The numbers after the '='
+        
+        # Extract the numbers using regex (supports scientific notation)
+        value_list = re.findall(r'[-+]?\d*\.\d+|\d+\.\d+[eE][-+]?\d+', values)
+        value_list = np.array([float(v) for v in value_list])  # Convert to NumPy array
+        
+        # Store the NumPy array in the dictionary with the variable name as the key
+        variables[var_name] = value_list
+
+# Display the parsed variables (name and array)
+for key, value in variables.items():
+    print(f"{key} = {value}")
+
+```
 ### os <a class="anchor" id="chapter10"></a>
 Check for files, if there is not file --> rerun program 
 ```
