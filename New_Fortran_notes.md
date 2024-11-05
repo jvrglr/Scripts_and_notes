@@ -1,6 +1,20 @@
 ### References
 Brainerd, W. S. (2009). Guide to Fortran 2003 programming (pp. 1-326). Berlin: Springer.  
 
+### Equivalent to Python's comprehension lists
+```
+program list_comprehension_equivalent
+    implicit none
+    integer, dimension(:), allocatable :: squares
+    integer :: i
+
+    ! Array constructor with implied DO loop
+    squares = [(i**2, i = 0, 9)]
+
+    ! Print the array
+    print *, squares
+end program list_comprehension_equivalent
+```
 ### Asign NaN to variable
 ```
 use, intrinsic :: ieee_arithmetic
