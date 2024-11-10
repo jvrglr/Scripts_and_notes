@@ -25,6 +25,7 @@
 * [Debugger](#chapter23)
 * [Matplotlib](#chapter24)
 * [Fits](#chapter25)
+* [Efficiency](#chapter26)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
