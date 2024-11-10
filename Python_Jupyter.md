@@ -24,6 +24,7 @@
 * [Pandas](#chapter22)
 * [Debugger](#chapter23)
 * [Matplotlib](#chapter24)
+* [Fits](#chapter25)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -735,8 +736,16 @@ plt.plot(x,y,"r--")
 --> EXAMPLES
 	fig, axes = plt.subplots(1, 2, figsize=(10,4)) --> 10x4 inches
 ```
-
-### Efficiency
+### Fits <a class="anchor" id="chapter25"></a>
+Tutorial on fits using scikit-learn: https://realpython.com/linear-regression-in-python/#python-packages-for-linear-regression
+```
+model = LinearRegression(fit_intercept=False).fit(xs.reshape((-1, 1)), ys)
+R2 = model.score(xs.reshape((-1, 1)), ys) #coefficient of determination R^2, R^2 = 1 is the perfect fit, if slower->worse
+intercept = model.intercept_
+slope = model.coef_
+plt.plot(xs,slope*xs+intercept)
+```
+### Efficiency <a class="anchor" id="chapter26"></a>
 In general, it is more efficient to iterate over the "inner" dimension first (in this case, j), followed by the "outer" dimension (in this case, i). The reason is that numpy arrays are stored in memory in a row-major order. By iterating over the inner dimension first, you access contiguous memory locations, which can take better advantage of the CPU cache and improve performance.
 ```
 for i in list1:
