@@ -531,7 +531,7 @@ for col in data.columns:
 ### MATPLOTLIB <a class="anchor" id="chapter24"></a>
 Set number of ticks for labels with locator_params:https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.locator_params.html
 ```
-plt.locator_params(axis='y', nbins=5,tight=True) #axis ="both" and axis ="x" are also available
+plt.locator_params(axis='both', nbins=5,tight=True) #axis ="y" and axis ="x" are also available
 ```
 Custom color maps:
 ```
