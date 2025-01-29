@@ -529,6 +529,16 @@ for col in data.columns:
 	continue (c) -->  Continue execution till next breakpoint
 ```
 ### MATPLOTLIB <a class="anchor" id="chapter24"></a>
+Heatmap using pcolormesh and adding contours
+```
+x_mesh, y_mesh = np.meshgrid(xs, ys)
+z_mesh = f(x_mesh, y_mesh)
+heatmap = plt.pcolormesh(x_mesh, y_mesh, z_mesh, shading='auto', cmap='coolwarm')
+contours = plt.contour(x_mesh, y_mesh, z_mesh, levels=4, colors='black')
+plt.clabel(contours, inline=True, fontsize=10)
+cbar = plt.colorbar(heatmap,ticks=list_with_ticks)
+cbar.set_label(cbar_name)
+```
 Set number of ticks for labels with locator_params:https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.locator_params.html
 ```
 plt.locator_params(axis='both', nbins=5,tight=True) #axis ="y" and axis ="x" are also available
@@ -598,22 +608,6 @@ import matplotlib.patches as patches
 red_patch = patches.Patch(color='red', label="red")
 plt.legend(handles=[red_patch])
 ```
-2D heatmap from dataframe using Seaborn
-```
-plt.close()
-
-d=pd.read_csv("data/var_h_b.dat",skipinitialspace=True,delimiter=" ",names="R0 h t".split(" "))
-pivotted= d.pivot(index='h',columns='R0',values='t')
-
-plt.xticks(fontsize=20)
-plt.yticks(fontsize=20)
-ax=sns.heatmap(pivotted,cmap='RdBu',cbar_kws={'label': 'colorbar_name'})
-ax.figure.axes[-1].yaxis.label.set_size(30) #size of title for colorbar
-#ax.invert_xaxis() #to invert xaxis (0,1,2)->(2,1,0)
-plt.xlabel("x_title",fontsize=30)
-plt.ylabel("y_title",fontsize=30)
-plt.show()
-```
 3D Scatter plot
 ```
 from mpl_toolkits.mplot3d import Axes3D
@@ -622,48 +616,10 @@ ax = Axes3D(fig)
 ax.scatter(x,y,z,s=markersize)
 plt.show()
 ```
-Heatmaps 1: from 2D numpy array
-```
-xpoints=101
-ppoints=101
-xs=np.linspace(-10,10,xpoints)
-ps=np.linspace(-10,10,ppoints)
-P=np.zeros((xpoints,ppoints))
-for i,x in enumerate(xs):
-        for j,p in enumerate(ps):
-            P[i][j]=G(x,p*t,s1)*G(p,0,s2)
-plt.imshow(P.T, cmap='viridis')
-pos=plt.xticks()
-lista=list(range(0,101,20))
-plt.xticks(lista,xs[lista].astype(int),fontsize=15)
-plt.yticks(lista,ps[lista].astype(int),fontsize=15)
-plt.title(r"$\rho(x,p,t="+str(t)+")$",fontsize=20)
-plt.xlabel("x",fontsize=30)
-plt.ylabel("p",fontsize=30,rotation=0)
-```
 Rotate ylabel
 ```
 h = plt.ylabel('y')
 h.set_rotation(0)
-```
-Heatmap 2: from DataFrame
-```
-data= pd.read_csv("data.dat",delimiter=" ",skipinitialspace=True)
-
-fig = plt.figure()
-ax = fig.gca(projection='3d')
-plt.xlabel("$X_s$")
-plt.ylabel("$P_{th}$")
-X = np.array(data[data["R0"]==R0]["#1-Xs"])
-Y = np.array(data[data["R0"]==R0]["Pth"])
-Z = np.array(data[data["R0"]==R0]["slope"])
-
-surf = ax.plot_trisurf(X, Y, Z, cmap=cm.coolwarm,
-		   linewidth=0, antialiased=False)
-# Add a color bar which maps values to colors.
-fig.colorbar(surf, shrink=0.5, aspect=5)
-
-plt.show()
 ```
 Add text to scatter plot:
 ```
