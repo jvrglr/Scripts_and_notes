@@ -86,6 +86,7 @@ do i = 1, N, 1
 This loop runs, at least, twice faster than the same loop evaluating M(i,j),
 
 7. Raul Toral told me that the file extension is important for the gfortran compiler: program.f and program.f90 are compiled in different ways!
+8. Definings variables with scientific notation; cariable = 4.3D-5 = 4.3*10^(-5). USE numberD-exponent instead of numberE-exponent! D->double precision, E-> single precision
 
 ### From number to string and vice versa
 https://coderwall.com/p/dqwzea/str2num-and-num2str-functions-in-fortran
