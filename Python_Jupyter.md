@@ -710,6 +710,33 @@ for i in list1:
 		m[j][i]=something #inner first!
 ``
 ```
+### Stochastic processes
+Learn diffusion function using quadratic variation
+```
+def learn_dif(xs,ts):
+    """
+    learn diffusion function for time series {ts,xs} using quadratic variation estimator.
+    """
+    dt = ts[1]-ts[0]
+    xmax = max(xs)
+    xmin = min(xs)
+    N = 100
+    dx = (xmax-xmin)/N
+    Dn = np.zeros(N+1)
+    count = np.zeros(N+1)
+    for ww,x in enumerate(xs[:-1:]):
+        n = int((x-xmin)/dx)
+        Dn[n] += (xs[ww+1]-x)**2.0
+        count[n] += 1
+    Dn = sqrt(Dn/count/dt)
+    x_bins = np.arange(N+1)*dx+xmin
+    threshold = 10
+    mask = count >= threshold
+    count = count[mask]
+    Dn = Dn[mask]
+    x_bins = x_bins[mask]
+    return x_bins,Dn,count
+```
 
 
 					
