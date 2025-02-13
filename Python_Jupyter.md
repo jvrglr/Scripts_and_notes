@@ -26,6 +26,7 @@
 * [Matplotlib](#chapter24)
 * [Fits](#chapter25)
 * [Efficiency](#chapter26)
+* [Stochastic processes](#chapter27)
 
 ### Jupyter notebook <a class="anchor" id="chapter1"></a>
 ```
@@ -710,7 +711,7 @@ for i in list1:
 		m[j][i]=something #inner first!
 ``
 ```
-### Stochastic processes
+### Stochastic processes <a class="anchor" id="chapter27"></a>
 Learn diffusion function using quadratic variation
 ```
 def learn_dif(xs,ts):
