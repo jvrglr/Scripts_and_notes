@@ -530,6 +530,11 @@ for col in data.columns:
 	continue (c) -->  Continue execution till next breakpoint
 ```
 ### MATPLOTLIB <a class="anchor" id="chapter24"></a>
+Remove space between multiplots
+```
+fig, (ax1,ax2,ax3) = plt.subplots(n_rows, n_columns,sharex=True,figsize=(2,3.6)) #sharey=True
+fig.tight_layout() ! This remobes space between rows in this example
+```
 Heatmap using pcolormesh and adding contours
 ```
 x_mesh, y_mesh = np.meshgrid(xs, ys)
