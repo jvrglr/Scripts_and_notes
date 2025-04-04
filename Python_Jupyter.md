@@ -533,7 +533,9 @@ for col in data.columns:
 Remove space between multiplots
 ```
 fig, (ax1,ax2,ax3) = plt.subplots(n_rows, n_columns,sharex=True,figsize=(2,3.6)) #sharey=True
-fig.tight_layout() ! This remobes space between rows in this example
+fig.tight_layout()  This remobes space between rows in this example
+# ...plots ...
+plt.subplots_adjust(hspace=0)
 ```
 Heatmap using pcolormesh and adding contours
 ```
