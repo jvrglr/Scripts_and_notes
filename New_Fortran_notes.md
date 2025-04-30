@@ -1,6 +1,107 @@
 ### References
 Brainerd, W. S. (2009). Guide to Fortran 2003 programming (pp. 1-326). Berlin: Springer.  
 
+### Discussion about use of public variables
+```
+In **Fortran 2008**, you can pass an **arbitrary list of parameters** (scalars, vectors, or matrices of different types and sizes) to a function using one of the following approaches:
+
+---
+
+### ✅ **Option 1: Using `class(*)`, `dimension(:)`, and `assumed-rank` (`...`) (Fortran 2008/2018)**
+This allows passing **polymorphic, unlimited-rank arrays**, but it's **read-only** (you can't modify them). It's useful when all parameters can be treated uniformly (e.g., for inspection or printing).
+
+#### Example (Fortran 2018, but works with compilers supporting TRs):
+```fortran
+subroutine process_params(params)
+    class(*), dimension(..), intent(in) :: params
+    ! Loop over rank and type with SELECT RANK and SELECT TYPE
+    select type(p => params)
+    type is (real)
+        print *, "Real scalar:", p
+    type is (real(:))
+        print *, "Real vector:", p
+    type is (real(:,:))
+        print *, "Real matrix:", p
+    class default
+        print *, "Unsupported type"
+    end select
+end subroutine
+```
+
+> ⚠️ This uses the **assumed-rank `dimension(..)`**, which is **Fortran 2018** standard, but some compilers like Intel and GNU support it experimentally.
+
+---
+
+### ✅ **Option 2: Create a Derived Type to Hold Heterogeneous Inputs**
+
+This is the **standard-compliant and portable** way in Fortran 2008. You define a custom type to store your parameters (scalars, arrays, matrices), and pass that to a function.
+
+#### Example:
+```fortran
+module parameter_types
+  implicit none
+  type :: Params
+    real, allocatable :: scalar_param
+    real, allocatable :: vector_param(:)
+    real, allocatable :: matrix_param(:,:)
+  end type Params
+end module parameter_types
+
+program main
+  use parameter_types
+  implicit none
+
+  type(Params) :: p
+
+  allocate(p%scalar_param)
+  allocate(p%vector_param(2))
+  allocate(p%matrix_param(2,2))
+
+  p%scalar_param = 3.14
+  p%vector_param = [1.0, 2.0]
+  p%matrix_param = reshape([1.0, 2.0, 3.0, 4.0], shape(p%matrix_param))
+
+  call process_params(p)
+end program main
+
+subroutine process_params(p)
+  use parameter_types
+  implicit none
+  type(Params), intent(in) :: p
+
+  print *, "Scalar param: ", p%scalar_param
+  print *, "Vector param: ", p%vector_param
+  print *, "Matrix param: ", p%matrix_param
+end subroutine process_params
+```
+
+---
+
+### ✅ **Option 3: Pass Parameters as a Polymorphic Array of Derived Types (Advanced)**
+
+You can define a parent abstract type and pass an array of extensions of it to create a truly generic interface for inputs — similar to Python's `*args`.
+
+This requires:
+- An **abstract base type** (e.g., `Parameter`)
+- Child types like `RealScalar`, `RealVector`, etc.
+- Using `select type` to handle them in the procedure
+
+This is more complex but flexible if you want **true arbitrary parameter lists of any type**.
+
+---
+
+### ✅ Summary Table
+
+| Method                     | Can contain vectors/matrices? | Arbitrary number? | Fortran 2008 standard? | Modifiable? | Notes |
+|---------------------------|-------------------------------|-------------------|------------------------|-------------|-------|
+| `class(*) dimension(..)`  | ✅                             | ✅                | ⚠️ Fortran 2018        | ❌          | Most flexible, but read-only |
+| Derived type (`type ::`)  | ✅                             | ❌ (fixed fields) | ✅                      | ✅          | Most portable and modifiable |
+| Polymorphic array types   | ✅                             | ✅                | ✅                      | ✅          | More complex, but powerful |
+
+---
+
+Would you like help building a specific interface with arbitrary parameters using one of these approaches?
+```
 ### Equivalent to Python's comprehension lists
 ```
 program list_comprehension_equivalent
