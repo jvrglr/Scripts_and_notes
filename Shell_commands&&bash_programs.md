@@ -1,5 +1,7 @@
 ## sftp with vs code
-Install SFTP extension and modify sftp.jason, example:
+Install SFTP  extension and modify sftp.jason.
+Download Kreare's version! (Kreare.kreare-sftp https://github.com/liximomo/vscode-sftp/issues/1032).
+Example:
 ```
 {
     "name": "My Server",
