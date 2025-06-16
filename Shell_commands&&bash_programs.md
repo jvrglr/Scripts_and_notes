@@ -1,3 +1,18 @@
+## sftp with vs code
+Install SFTP extension and modify sftp.jason, example:
+```
+{
+    "name": "My Server",
+    "host": "proteus.ugr.es",
+    "protocol": "sftp",
+    "port": 22,
+    "username": "javieraguilar",
+    "remotePath": "/home/javieraguilar/MLE",
+    "ignore": ["**/*.dat","**/*.pdf"], 
+    "password": "************",
+    "uploadOnSave": true
+}
+```
 ## latexdiff 
 This will show new version (in blue) and crossed old version (in red)
 ```
