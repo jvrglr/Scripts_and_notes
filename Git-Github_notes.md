@@ -9,6 +9,7 @@
 > git add . : add all changes.
 
 > git add *.extension : add all changes in the files with extension named "extension".
+* **git commit -m "message"**: commit (like really save) added changes to memmory. "Message" should be filled with the information of the changes so that it is easy to keep track of what every commit stores.
 * git merge Branch_name **Merges the specified branch into the currently active branch**
 * git branch -d Branch_name **Delete branch**
 * git log **History of commits**
