@@ -44,3 +44,13 @@ https://stackoverflow.com/questions/19085807/please-enter-a-commit-message-to-ex
     press "esc"
     write ":wq"
     then press enter
+
+## License
+* Use MIT (or CC BY 4.0 if it's more data/scripts than software).
+* Add citation statement to readme:
+
+This project is shared for **academic and research purposes**. It is free to use, redistribute, modify, and share for research purposes, provided that proper credit is given to the authors through citation of:
+
+Aguilar, Javier, Miguel A. Muñoz, and Sandro Azaele.  
+*The Limits of Inference in Complex Systems: When Stochastic Models Become Indistinguishable.*  
+arXiv preprint arXiv:2509.24977 (2025).
