@@ -1,10 +1,13 @@
-### Git
+### Git notes
 
 ## Basic concepts
-* *repository*: A **folder**, usually hidden and called ".git" that git uses to track for changes in the project. 
+* **repository**: A *folder*, usually hidden and called ".git" that git uses to track for changes in the project. 
 
 ## Basic commands
-* *git init*:  Creates the repository in the folder where git init was executed. This should be the first command.
+* **git init**:  Creates the repository in the folder where git init was executed. This should be the first command.
+* **git add filename**: Adds changes in filename to be stored. 
+    git add . : add all changes.
+    git add *.extension : add all changes in the files with extension named "extension".
 * git merge Branch_name **Merges the specified branch into the currently active branch**
 * git branch -d Branch_name **Delete branch**
 * git log **History of commits**
