@@ -1,12 +1,12 @@
 ### Git notes
 
 ## Basic concepts
-* **repository**: A *folder*, usually hidden and called ".git" that git uses to track for changes in the project.
+* **repository**: The whole project (=folder where the project is)
 * **branches**: Different "states of the memory" is like different history lines of the project.
 
 ## Basic commands
-* **git init**:  Creates the repository in the folder where git init was executed. This should be the first command. Git stage means the same thing (it seems that stage was added after "add" as it is more intuitively representing what the command does).
-* **git add filename**: Adds changes in filename to be stored. 
+* **git init**:  Creates the repository in the folder where git init was executed. Basically it creates a hidden repository (.git) where all data of changes is stored. This should be the first command. 
+* **git add filename**: Adds changes in filename to be stored. Git stage means the same thing (it seems that stage was added after "add" as it is more intuitively representing what the command does).
 > git add . : add all changes.
 
 > git add *.extension : add all changes in the files with extension named "extension".
