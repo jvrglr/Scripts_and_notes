@@ -15,6 +15,7 @@
 * **git branch**: List branches
 * **git checkout - b branchname**:  Creates a new branch called branchname and switches to it. It always creates it; if a branch with that name already exists it will throw an error.
 *  **git checkout branchname**: Switch branch to "branchname"
+*  **git checkout -b new_branch_name commit_hash** :Creates a new branch called branch_name from commit_hash.
 * git merge Branch_name **Merges the specified branch into the currently active branch**
 * git branch -d Branch_name **Delete branch**
 * git log **History of commits**
