@@ -13,21 +13,21 @@
 * **git commit -m "message"**: Commit (like really save) added changes to memmory. "Message" should be filled with the information of the changes so that it is easy to keep track of what every commit stores.
 * **git log**: Gives you the list of all commits with identifier, associated message, in which branch it is located and commit time and date.
 * **git branch**: List branches
-* **git checkout - b branchname**:  Creates a new branch called branchname and switches to it. It always creates it; if a branch with that name already exists it will throw an error.
-*  **git checkout branchname**: Switch branch to "branchname"
-*  **git checkout -b new_branch_name commit_hash** :Creates a new branch called branch_name from commit_hash.
+* **git checkout -b branchname**:  Creates a new branch called branchname and switches to it. It always try to create it; but don't overwrite: if a branch with that name already exists it will throw an error.
+>  **git checkout branchname**: Switch branch to "branchname". Checkout discards unstaged (not added) local changes.
+
+*  **git checkout -b branch_name commit_hash** :Creates a new branch called branch_name from commit_hash.
 * git merge Branch_name **Merges the specified branch into the currently active branch**
 * git branch -d Branch_name **Delete branch**
-* git log **History of commits**
 * git reset --hard HEAD~1 **Undo last commit**
 
 ## Working with remote
 * Just created a local repository with git init. Also a remote repository in github where I added a readme file. Run this to associate both repositories and get readmefile in local.
-'''
+```
 git remote add origin https://github.com/yourusername/your-repo-name.git
 git branch -M main
 git pull origin main --allow-unrelated-histories # This will require to provide github credentials (password through token, not log in passwrd).
-'''
+```
 
 * https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
     
@@ -59,8 +59,4 @@ https://stackoverflow.com/questions/19085807/please-enter-a-commit-message-to-ex
 * Use MIT (or CC BY 4.0 if it's more data/scripts than software).
 * Add citation statement to readme:
 
-This project is shared for **academic and research purposes**. It is free to use, redistribute, modify, and share for research purposes, provided that proper credit is given to the authors through citation of:
-
-Aguilar, Javier, Miguel A. Muñoz, and Sandro Azaele.  
-*The Limits of Inference in Complex Systems: When Stochastic Models Become Indistinguishable.*  
-arXiv preprint arXiv:2509.24977 (2025).
+This project is shared for **academic and research purposes**. It is free to use, redistribute, modify, and share for research purposes, provided that proper credit is given to the authors through citation of: add_ref
