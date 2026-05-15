@@ -4,7 +4,7 @@
 * **repository**: A *folder*, usually hidden and called ".git" that git uses to track for changes in the project. 
 
 ## Basic commands
-* **git init**:  Creates the repository in the folder where git init was executed. This should be the first command.
+* **git init**:  Creates the repository in the folder where git init was executed. This should be the first command. Git stage means the same thing (it seems that stage was added after "add" as it is more intuitively representing what the command does).
 * **git add filename**: Adds changes in filename to be stored. 
 > git add . : add all changes.
 
@@ -17,7 +17,12 @@
 * git reset --hard HEAD~1 **Undo last commit**
 
 ## Working with remote
-* git add file_name **or** git stage file_name **They are synonyms. The command prepares the files for commit.**
+* Just created a local repository with git init. Also a remote repository in github where I added a readme file. Run this to associate both repositories and get readmefile in local.
+'''
+git remote add origin https://github.com/yourusername/your-repo-name.git
+git branch -M main
+git pull origin main --allow-unrelated-histories # This will require to provide github credentials (password through token, not log in passwrd).
+'''
 
 * https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
     
