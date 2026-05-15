@@ -14,9 +14,15 @@
 * **git log**: Gives you the list of all commits with identifier, associated message, in which branch it is located and commit time and date.
 * **git branch**: List branches
 * **git checkout -b branchname**:  Creates a new branch called branchname and switches to it. It always try to create it; but don't overwrite: if a branch with that name already exists it will throw an error.
->  **git checkout branchname**: Switch branch to "branchname". Checkout discards unstaged (not added) local changes.
+>  **git checkout branchname**: Switch branch to "branchname". 
 
-*  **git checkout -b branch_name commit_hash** :Creates a new branch called branch_name from commit_hash.
+> **git checkout filename**:It discards the unstaged changes in filename, restoring it to the state of the last commit. Checkout discards unstaged (not added) local changes.
+
+> **git checkout commit_hash**: Go back to commit hash with detached head (you are not in a branch an could lose further changes)
+
+>  **git checkout -b branch_name commit_hash** :Creates a new branch called branch_name from commit_hash. SEEMS SAFER WAY TO GO BACK TO A COMMIT.
+
+
 * git merge Branch_name **Merges the specified branch into the currently active branch**
 * git branch -d Branch_name **Delete branch**
 * git reset --hard HEAD~1 **Undo last commit**
@@ -42,7 +48,6 @@ git pull origin main --allow-unrelated-histories # This will require to provide 
 * git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY New_Name   **Clone from remote on new folder New_name**
 
 * git pull origin Branch_name   **Fetch+merge local from remote**
-* git checkout filename **WHEN PULLING, Discard local changes for a specific file https://stackoverflow.com/questions/15745045/how-do-i-resolve-git-saying-commit-your-changes-or-stash-them-before-you-can-me/20036755**
 
 ## Information
 * git branch -a **"Hidden" branches**
