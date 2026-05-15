@@ -11,7 +11,7 @@
 
 > git add *.extension : add all changes in the files with extension named "extension".
 * **git commit -m "message"**: Commit (like really save) added changes to memmory. "Message" should be filled with the information of the changes so that it is easy to keep track of what every commit stores.
-* **git log**: Gives you the list of all commits with identifier, associated message and commit time and date.
+* **git log**: Gives you the list of all commits with identifier, associated message, in which branch it is located and commit time and date.
 * **git branch**: List branches
 * **git checkout - b branchname**:  Creates a new branch called branchname and switches to it. It always creates it; if a branch with that name already exists it will throw an error.
 *  **git checkout branchname**: Switch branch to "branchname"
