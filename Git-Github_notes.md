@@ -1,7 +1,8 @@
 ### Git notes
 
 ## Basic concepts
-* **repository**: A *folder*, usually hidden and called ".git" that git uses to track for changes in the project. 
+* **repository**: A *folder*, usually hidden and called ".git" that git uses to track for changes in the project.
+* **branches**: Different "states of the memory" is like different history lines of the project.
 
 ## Basic commands
 * **git init**:  Creates the repository in the folder where git init was executed. This should be the first command. Git stage means the same thing (it seems that stage was added after "add" as it is more intuitively representing what the command does).
@@ -11,6 +12,9 @@
 > git add *.extension : add all changes in the files with extension named "extension".
 * **git commit -m "message"**: Commit (like really save) added changes to memmory. "Message" should be filled with the information of the changes so that it is easy to keep track of what every commit stores.
 * **git log**: Gives you the list of all commits with identifier, associated message and commit time and date.
+* **git branch**: List branches
+* **git checkout - b branchname**:  Creates a new branch called branchname and switches to it. It always creates it; if a branch with that name already exists it will throw an error.
+*  **git checkout branchname**: Switch branch to "branchname"
 * git merge Branch_name **Merges the specified branch into the currently active branch**
 * git branch -d Branch_name **Delete branch**
 * git log **History of commits**
