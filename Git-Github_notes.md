@@ -1,4 +1,10 @@
-## Git
+### Git
+
+## Basic concepts
+* *repository*: A **folder**, usually hidden and called ".git" that git uses to track for changes in the project. 
+
+## Basic commands
+* *git init*:  Creates the repository in the folder where git init was executed. This should be the first command.
 * git merge Branch_name **Merges the specified branch into the currently active branch**
 * git branch -d Branch_name **Delete branch**
 * git log **History of commits**
