@@ -22,6 +22,8 @@
 
 >  **git checkout -b branch_name commit_hash** :Creates a new branch called branch_name from commit_hash. SEEMS SAFER WAY TO GO BACK TO A COMMIT.
 
+* **git rm --cached 'filename'** : Stops tracking 'filename' for future commits, but leaves 'filename'  on the computer.
+
 
 * git merge Branch_name **Merges the specified branch into the currently active branch**
 * git branch -d Branch_name **Delete branch**
