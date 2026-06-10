@@ -746,7 +746,7 @@ def learn_dif(xs,ts):
     x_bins = x_bins[mask]
     return x_bins,Dn,count
 ```
-### VS Code python snippets
+### VS Code python snippets <a class="anchor" id="chapter28"></a>
 Open python snippets in VS code
 ```
 shift + command + p --> Snippets: Configure Snippets --> python.json
