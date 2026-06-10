@@ -3,4 +3,4 @@ Compilation of scripts and programming notes. My aim is to create a quick source
 languages/programs. The content will range from basics to specific solutions.
 
 ## Format
-So long, the only rule is to add simple self-explanatory comments to the lines/functions/scripts. There is a lack of a generalized format on this repository...which makes it look quite chaotic.
+So long, the only rule is to add simple self-explanatory comments to the lines/functions/scripts. There is a lack of a generalized format on this repository...which makes it quite chaotic.
