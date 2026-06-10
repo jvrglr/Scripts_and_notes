@@ -779,8 +779,6 @@ python.json file
 "start_function_python": {
     "prefix": "start_function_python",
     "body": [
-        "# %%",
-        "%reset",
         "import sys",
         "import matplotlib",
         "from scipy.optimize import curve_fit",
