@@ -1,15 +1,27 @@
-### Git notes
+# Git notes
 
 ## Basic concepts
 * **repository**: The whole project (=folder where the project is)
 * **branches**: Different "states of the memory" is like different history lines of the project.
 
 ## Basic commands
-* **git init**:  Creates the repository in the folder where git init was executed. Basically it creates a hidden repository (.git) where all data of changes is stored. This should be the first command. 
+* **git init**:  Creates the repository in the folder where git init was executed. Basically it creates a hidden repository (.git) where all data of changes is stored. This should be the first command.
 * **git add filename**: Adds changes in filename to be stored. Git stage means the same thing (it seems that stage was added after "add" as it is more intuitively representing what the command does).
 > git add . : add all changes.
 
 > git add *.extension : add all changes in the files with extension named "extension".
+* **.gitignoe**: list of files or extensions to be ignored with git add.
+> create .gitignore file
+```
+touch .gitignore
+```
+> My typicall .gitignore file
+```
+*.pdf
+*.txt
+*.dat
+*.svg
+```
 * **git commit -m "message"**: Commit (like really save) added changes to memmory. "Message" should be filled with the information of the changes so that it is easy to keep track of what every commit stores.
 * **git log**: Gives you the list of all commits with identifier, associated message, in which branch it is located and commit time and date.
 * **git branch**: List branches
