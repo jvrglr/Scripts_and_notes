@@ -779,6 +779,7 @@ python.json file
 "start_function_python": {
     "prefix": "start_function_python",
     "body": [
+        "# %%",
         "import sys",
         "import matplotlib",
         "from scipy.optimize import curve_fit",
@@ -794,6 +795,7 @@ python.json file
         "import matplotlib.pyplot as plt",
         "import time",
         "import math",
+        "from numba import njit",
         "import pandas as pd",
         "from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import",
         "from matplotlib import cm",
@@ -845,6 +847,7 @@ python.json file
         "import sys",
         "from scipy.optimize import curve_fit",
         "import numpy as np",
+        "from numba import njit",
         "from numpy import exp as exp",
         "from numpy import log as log",
         "from numpy import sqrt as sqrt",
